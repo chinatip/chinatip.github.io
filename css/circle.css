@@ -37,6 +37,7 @@
 .c100 {
   position: relative;
   font-size: 120px;
+  font-family: 'Text Me One', sans-serif;
   width: 1em;
   height: 1em;
   -webkit-border-radius: 50%;

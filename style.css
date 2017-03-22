@@ -9,7 +9,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   line-height: 150%;
-  margin: 80px 0 80px 0;
+  margin-bottom: 80px;
 }
 
 @-webkit-keyframes fontfix {
@@ -61,7 +61,7 @@ i {
 }
 
 img {
-  width: 220px;
+  height:300px;
   margin-top: 30px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -76,4 +76,24 @@ img {
 
 .contact-link {
   margin-top: 15px;
+}
+.project-logo{
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-logo a{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-logo img{
+  width: 80px;
+  height: 50%;
+  margin: 20px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
 }

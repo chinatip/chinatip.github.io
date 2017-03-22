@@ -80,10 +80,12 @@ img {
 .project-logo{
   display: flex;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
 }
 .project-logo a{
   display: flex;
   flex-direction: column;
+  -ms-flex-direction: column;
   text-align: center;
 }
 

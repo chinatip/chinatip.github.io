@@ -1,26 +1,36 @@
 body {
-	background-color: white;
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  margin: 3em;
-  background: #f4f5f5;
+    background-color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7em;
+    line-height: 150%;
+    margin: 3em;
+    background: #f4f5f5;
 }
 
-.left {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #2b98d4;
-  color: white;
-  padding: 0;
-  padding-bottom: 2em;
+.left-side {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #2b98d4;
+    color: white;
+    padding: 0;
+    padding-bottom: 2em;
+}
+
+.right-side {
+    border: 1px solid #d7d7d7;
+    width: 100%;
+    margin-bottom: 1.5em;
+    margin-left: 2em;
+    padding: 1em;
+    box-shadow: 1.5em 2em 1em -1em #d7d7d7;
+    background-color: white;
 }
 
 h1 {
@@ -28,20 +38,9 @@ h1 {
 }
 
 h2 {
-  width: 100%;
-  text-align: center;
-  margin: 10px 0 1em;
-}
-
-.verticalLine {
-  border-right: thick solid black;
-  margin: 20px;
-  text-align: left;
-  line-height: 50%
-}
-
-.verticalLine h3 {
-  margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 1em;
 }
 
 .c100 {
@@ -54,37 +53,33 @@ i {
 }
 
 img {
-  height:300px;
-}
-
-.skills-bar {
-  margin-top: 30px;
+    height:300px;
 }
 
 .contact-link {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 .project-logo{
-  display: flex;
-  flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 }
 .project-logo a{
-  display: flex;
-  flex-direction: column;
-  -ms-flex-direction: column;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    text-align: center;
 }
 
 .project-logo img{
-  width: 80px;
-  height: 50%;
-  margin: 20px;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
+    width: 80px;
+    height: 50%;
+    margin: 20px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
 }
 
 .thumbnail {
@@ -99,35 +94,45 @@ img {
     right: 0;
     width: 100%;
     color: white !important;
-    text-shadow: 2px 2px #2b98d4;
+    text-shadow: 2px 2px #11559e;
 }
 
 .left-box {
-  position: relative;
-  padding: 10px;
-  width: 100%;
-  font-size: 1.2em;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.2em;
 }
 
 .left-box-head {
-  top: 0px;
-  width: 100%;
-  color: #2b98d4;
-  background-color: white;
-  padding: 0.05em;
+    top: 0px;
+    width: 100%;
+    color: #2b98d4;
+    background-color: white;
+    padding: 0.05em;
+}
+
+.fa {
+    color: white;
 }
 
 .fa-facebook-square {
-  color:#ff6965;
+    text-shadow: 2px 2px #ff6965;
 }
 
 .fa-medium {
-  color:#00dcbf;
+    text-shadow: 2px 2px #00dcbf;
 }
 .fa-github {
-  color: #fac200;
+    text-shadow: 2px 2px #fac200;
 
 }
 .fa-bitbucket {
-  color:#9900ae;
+   text-shadow: 2px 2px #9900ae;
+}
+
+.edu-box h3{
+    color: #47a1d5;
+    font-size: 1.2em;
+    margin-top: 1.3em;
 }

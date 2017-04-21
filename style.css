@@ -1,43 +1,36 @@
 body {
-  -webkit-animation-delay: 0.1s;
-  -webkit-animation-name: fontfix;
-  -webkit-animation-duration: 0.1s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-
 	background-color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 16px;
   line-height: 150%;
-  margin-bottom: 80px;
+  margin: 3em;
+  background: #f4f5f5;
 }
 
-@-webkit-keyframes fontfix {
-  from { opacity: 1; }
-  to   { opacity: 1; }
+.left {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #2b98d4;
+  color: white;
+  padding: 0;
+  padding-bottom: 2em;
 }
 
 h1 {
-	font-family: 'Poiret One', 'Text Me One', sans-serif;
 	font-size: 45px;
 }
 
 h2 {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid #898989;
-  line-height: 0.1em;
-  margin: 10px 0 20px;
-	font-family: 'Oswald', sans-serif;
-}
-
-h2 span {
-  background:#fff;
-  padding:0 10px;
-}
-
-h3 {
-  font-family: 'Oswald', sans-serif;
+  margin: 10px 0 1em;
 }
 
 .verticalLine {
@@ -52,7 +45,7 @@ h3 {
 }
 
 .c100 {
-	margin: 0.1em;
+	margin: 0.1em;background-size: 50%;
 }
 
 i {
@@ -62,12 +55,6 @@ i {
 
 img {
   height:300px;
-  margin-top: 30px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
 }
 
 .skills-bar {
@@ -98,4 +85,48 @@ img {
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
+}
+
+.thumbnail {
+    position: relative;
+    background: #2b98d4;
+    border: #2b98d4;
+}
+
+.caption {
+    position: absolute;
+    top: 75%;
+    right: 0;
+    width: 100%;
+    color: white !important;
+    text-shadow: 2px 2px #2b98d4;
+}
+
+.left-box {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.left-box-head {
+  top: 0px;
+  width: 100%;
+  color: #2b98d4;
+  background-color: white;
+}
+
+.fa-facebook-square {
+  color:#ff6965;
+}
+
+.fa-medium {
+  color:#00dcbf;
+}
+.fa-github {
+  color: #fac200;
+
+}
+.fa-bitbucket {
+  color:#9900ae;
 }

@@ -23,7 +23,7 @@ body {
     padding-bottom: 2em;
 }
 
-.right-side {
+.right-side-inner {
     border: 1px solid #d7d7d7;
     width: 100%;
     margin-bottom: 1.5em;
@@ -63,6 +63,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     -ms-flex-wrap: wrap;
+    justify-content: center;
 }
 .project-logo a{
     display: flex;
@@ -135,4 +136,30 @@ img {
     color: #47a1d5;
     font-size: 1.2em;
     margin-top: 1.3em;
+}
+
+@media only screen and (max-width: 990px) {
+    body {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .caption {
+        top: 85%;
+    }
+
+    .left-side{
+        margin-bottom: 1em;
+    }
+
+    .right-side-inner{
+        margin-left: 0;
+    }
 }

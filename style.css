@@ -1,10 +1,12 @@
+้html {}
+
 body {
     background-color: white;
     font-family: 'Oswald', sans-serif;
     font-size: 1.7em;
     line-height: 150%;
-    margin: 3em;
     background: #f4f5f5;
+    margin: 3em;
 }
 
 .left-side {
@@ -21,6 +23,7 @@ body {
     color: white;
     padding: 0;
     padding-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .right-side-inner {
@@ -141,6 +144,7 @@ img {
 @media only screen and (max-width: 990px) {
     body {
         font-size: 2em;
+        margin: 0;
     }
 
     h1 {

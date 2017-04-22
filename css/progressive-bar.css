@@ -5,6 +5,8 @@ body {
 .progress {
     position: relative;
 	height: 28px !important;
+	color: white !important;
+	background-color: #a2a2a2 !important;
 	-webkit-transition-duration: 0.2s;
 	-moz-transition-duration: 0.2s;
 	-o-transition-duration: 0.2s;

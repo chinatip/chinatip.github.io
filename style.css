@@ -24,6 +24,7 @@ body {
     padding: 0;
     padding-bottom: 2em;
     margin-bottom: 3em;
+    font-size: 1.2em;
 }
 
 .right-side-inner {
@@ -37,8 +38,9 @@ body {
 }
 
 h1 {
+    margin: 0;
 	font-size: 40px;
-    font-family: 'Lobster', cursive;
+    font-family: 'Righteous', cursive;
 }
 
 h2 {
@@ -99,49 +101,42 @@ img {
     position: relative;
     background: #2b98d4;
     border: #2b98d4;
+    margin: 0;
 }
 
 .caption {
     position: absolute;
-    top: 75%;
-    right: 0;
+    bottom: 0px;
+    right: 0px;
     width: 100%;
     color: white !important;
     text-shadow: 2px 2px #11559e;
+    background: rgba(43, 152, 212, 0.2);
 }
 
 .left-box {
     position: relative;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     width: 100%;
-    font-size: 1.2em;
+}
+
+.about-me {
+    padding: 1em;
 }
 
 .left-box-head {
     top: 0px;
     width: 100%;
     color: #2b98d4;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.80);
     padding: 0.05em;
+    margin-top: 0;
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.7);
 }
 
 .fa {
     color: white;
-}
-
-.fa-facebook-square {
-    text-shadow: 2px 2px #ff6965;
-}
-
-.fa-medium {
     text-shadow: 2px 2px #00dcbf;
-}
-.fa-github {
-    text-shadow: 2px 2px #fac200;
-
-}
-.fa-bitbucket {
-   text-shadow: 2px 2px #9900ae;
 }
 
 .edu-box h3{
@@ -160,9 +155,9 @@ img {
         display: none;
     }
 
-    #skill-box-web {
-        display: block;
-    }
+#skill-box-web {
+    display: block;
+}
 
 @media only screen and (max-width: 465px) {
     #skill-box-mobile {
@@ -191,7 +186,7 @@ img {
     }
 
     .caption {
-        top: 75%;
+        bottom: 0px;
     }
 
     .left-side{
@@ -228,7 +223,7 @@ img {
     }
 
     .caption {
-        top: 85%;
+        bottom: 0px;
     }
 
     .left-side{

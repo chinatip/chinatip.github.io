@@ -1,0 +1,105 @@
+{
+    "aboutMe": {
+        "img": "",
+        "name": "Chinatip Vichian",
+        "position": "Full Stack Engineer",
+        "company": "Agoda",
+        "title": "Hello,",
+        "subtitle": null        
+    },
+    "experiences": [
+        {
+            "company": "Agoda",
+            "position": "Full Stack Engineer",
+            "duration": "Aug 2018 - Now",
+            "detail": null
+        },
+        {
+            "company": "Cleverse",
+            "position": "Frontend Web Developer",
+            "duration": "Dec 2017 - Feb 2018",
+            "detail": "Visualizing data using ECharts and ReactJS, developing forms and landing pages using React"
+        },
+        {
+            "company": "Cleverse",
+            "position": "Intern",
+            "duration": "June 2017 - Dec 2017",
+            "detail": null
+        }
+    ],
+    "projects": [
+        {
+            "name": "problem-solving",
+            "description": "My Solutions from Codeforces and HackerRank",
+            "tags": ["Python"],
+            "detail": {
+                "description": "Collection of my solutions for some problems on Codeforces using Python 2",
+                "location": "HackerRank, CodeForces",
+                "time": "2021",
+                "imgList": null,
+                "tags": ["HackerRank", "CodeForces", "Python"],
+                "links": ["https://github.com/chinatip/problem-solving"]
+            }
+        },
+        {
+            "name": "MeetDent",
+            "description": "Dentist appointment scheduling application",
+            "tags": ["JS"],
+            "detail": {
+                "description": "MeetDent is a dentist appointment scheduling application. It has two side which are patient and clinic sides.",
+                "location": "Senior Project",
+                "time": "2018",
+                "imgList": null,
+                "tags": ["React", "Express", "Ant Design", "JS"],
+                "links": ["https://github.com/chinatip/meet-dent-frontend", "https://github.com/chinatip/meet-dent-backend"]
+            }
+        },
+        {
+            "name": "My Stickers",
+            "description": "Sticker App",
+            "tags": ["Java"],
+            "detail": {
+                "description": "Native android application expected to be able to add stickers to pictures and has its gallery",
+                "location": "Project for Software Specification class",
+                "time": "2018",
+                "imgList": null,
+                "tags": ["Java"],
+                "links": ["https://github.com/chinatip/My-Stickers"]
+            }
+        },
+        {
+            "name": "tourist-attractions-prolog",
+            "description": "Tourist Attractions in Petchaburi Province",
+            "tags": ["Prolog"],
+            "detail": {
+                "description": "This project uses knowledge representation and Prolog language to find tourist attractions in Petchaburi province in Thailand.\nIn this project, you can find tourist attractions by district, type, activity, age, time, budget, and entrance fee.\nThis project provides you a filter which you can use to find a place with just a function.",
+                "location": "Project for Knowledge Representation class",
+                "time": "2017",
+                "imgList": null,
+                "tags": ["Prolog"],
+                "links": ["https://github.com/chinatip/tourist-attractions-prolog"]
+            }
+        }
+    ],
+    "activities": [
+        {
+            "name": "Young Webmaster Camp - Web Programming #15",
+            "duration": "2018",
+            "description": "Website creating camp for learning and building a website together with designer, content, and marketing students"
+        },
+        {
+            "name": "Exchange Student at Germany",
+            "duration": "2012-2013",
+            "description": "Website creating camp for learning and building a website together with designer, content, and marketing students"
+        }
+    ],
+    "education": [
+        {
+            "school": "Kasetsart University",
+            "degree": "Bachelor of Engineering (B.Eng.)",
+            "fieldOfStudy": "Software and Knowledge Engineering",
+            "duration": "2014 - 2018",
+            "description": "Second-Class Honours"
+        }
+    ]
+}

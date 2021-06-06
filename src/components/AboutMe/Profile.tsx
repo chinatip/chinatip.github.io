@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Box, Typography } from '@material-ui/core';
 import ProfileImage from '../common/ProfileImage';
-import { AboutMe } from '../../models/data';
+import { AboutMe } from '../../models/Data';
 
 const Profile = (props: AboutMe) => {
     return (

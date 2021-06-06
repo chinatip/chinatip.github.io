@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@material-ui/core';
-import { AboutMe } from '../../models/data';
+import { AboutMe } from '../../models/Data';
 import Contact from './../common/Contact';
 
 const IntroAndContact = (props: AboutMe) => {

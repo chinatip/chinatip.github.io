@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid';
 import Profile from './Profile';
 import IntroAndContact from './IntroAndContact';
 import styled from 'styled-components';
-import { AboutMe } from '../../models/data';
+import { AboutMe } from '../../models/Data';
 
 const Wrapper = styled(Grid)`
     padding: 60px 0;
@@ -18,7 +18,6 @@ const AboutMeSection = (props: AboutMe) => {
             direction="row"
             justify="center"
             alignItems="center"
-            spacing={3}
         >
             <Profile {...props} />
             <IntroAndContact {...props} />

@@ -30,10 +30,10 @@
     "projects": [
         {
             "name": "problem-solving",
-            "description": "My Solutions from Codeforces and HackerRank",
+            "description": "Problem Solving Solutions",
             "tags": ["Python"],
             "detail": {
-                "description": "Collection of my solutions for some problems on Codeforces using Python 2",
+                "description": "My solutions for problems on Codeforces, HackerRank, and LeetCode using Python2",
                 "location": "HackerRank, CodeForces",
                 "time": "2021",
                 "imgList": null,

@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import AboutMeSection from './AboutMe/AboutMeSection';
+import AboutMe from './AboutMe/AboutMe';
 import styled from 'styled-components';
 import { Data } from '../models/Data';
 import Experiences from './Experiences/Experiences';
@@ -12,13 +12,14 @@ const Wrapper = styled.div`
 `;
 
 const Container = (data: Data) => {
+    console.log(data.projects)
     return (
         <Wrapper>
             <Grid
                 container
                 xs={8}
             >
-                <AboutMeSection {...data.aboutMe} />
+                <AboutMe {...data.aboutMe} />
                 <Experiences {...data.experiences}/>
             </Grid>
         </Wrapper>

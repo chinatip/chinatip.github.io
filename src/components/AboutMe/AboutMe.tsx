@@ -2,15 +2,14 @@ import Grid from '@material-ui/core/Grid';
 import Profile from './Profile';
 import IntroAndContact from './IntroAndContact';
 import styled from 'styled-components';
-import { AboutMe } from '../../models/Data';
+import { AboutMeSection } from '../../models/Data';
 
 const Wrapper = styled(Grid)`
     padding: 60px 0;
     overflow: auto;
 `;
 
-const AboutMeSection = (props: AboutMe) => {
-    console.log(props.name)
+const AboutMe = (props: AboutMeSection) => {
     return (
         <Wrapper
             container
@@ -26,4 +25,4 @@ const AboutMeSection = (props: AboutMe) => {
     );
 };
 
-export default AboutMeSection;
+export default AboutMe;

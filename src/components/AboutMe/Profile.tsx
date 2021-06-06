@@ -1,10 +1,11 @@
-import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Box, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import ProfileImage from '../common/ProfileImage';
-import { AboutMe } from '../../models/Data';
+import { AboutMeSection } from '../../models/Data';
+import { Mobile } from '../../utils/BreakpointHelper';
+import Contact from './../common/Contact';
 
-const Profile = (props: AboutMe) => {
+const Profile = (props: AboutMeSection) => {
     return (
         <Grid
             container
@@ -22,6 +23,9 @@ const Profile = (props: AboutMe) => {
             <Typography variant="subtitle1">
                 {props.position}
             </Typography>
+            <Mobile>
+                <Contact />
+            </Mobile>
         </Grid>
     );
 };

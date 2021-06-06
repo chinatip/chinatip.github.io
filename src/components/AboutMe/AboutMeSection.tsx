@@ -18,6 +18,7 @@ const AboutMeSection = (props: AboutMe) => {
             direction="row"
             justify="center"
             alignItems="center"
+            spacing={3}
         >
             <Profile {...props} />
             <IntroAndContact {...props} />

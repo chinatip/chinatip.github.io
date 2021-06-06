@@ -4,7 +4,7 @@ import Contact from './../common/Contact';
 
 const IntroAndContact = (props: AboutMe) => {
     return (
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} md={8}>
             <Typography variant="h6">
                 {props.title} 
             </Typography>

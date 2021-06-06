@@ -8,8 +8,9 @@ const Profile = (props: AboutMe) => {
     return (
         <Grid
             container
+            item
             xs={12}
-            sm={4}
+            md={4}
             direction="column"
             justify="center"
             alignItems="center"

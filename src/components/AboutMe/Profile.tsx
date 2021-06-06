@@ -2,8 +2,9 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Box, Typography } from '@material-ui/core';
 import ProfileImage from '../common/ProfileImage';
+import { AboutMe } from '../../models/data';
 
-const Profile = () => {
+const Profile = (props: AboutMe) => {
     return (
         <Grid
             container
@@ -15,10 +16,10 @@ const Profile = () => {
         >
             <ProfileImage />
             <Typography variant="h5">
-                Chinatip Vichian
+                {props.name}
             </Typography>
             <Typography variant="subtitle1">
-                Full Stack Engineer
+                {props.position}
             </Typography>
         </Grid>
     );

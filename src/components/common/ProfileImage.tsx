@@ -1,9 +1,4 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
-
-interface Props {
-    withBorder: boolean
-}
 
 const size = 120;
 const borderStyle = css`

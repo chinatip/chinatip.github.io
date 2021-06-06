@@ -1,18 +1,17 @@
 {
     "aboutMe": {
-        "img": "",
+        "image": "",
         "name": "Chinatip Vichian",
         "position": "Full Stack Engineer",
         "company": "Agoda",
         "title": "Hello,",
-        "subtitle": null        
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."        
     },
     "experiences": [
         {
             "company": "Agoda",
             "position": "Full Stack Engineer",
-            "duration": "Aug 2018 - Now",
-            "detail": null
+            "duration": "Aug 2018 - Now"
         },
         {
             "company": "Cleverse",
@@ -23,8 +22,7 @@
         {
             "company": "Cleverse",
             "position": "Intern",
-            "duration": "June 2017 - Dec 2017",
-            "detail": null
+            "duration": "June 2017 - Dec 2017"
         }
     ],
     "projects": [

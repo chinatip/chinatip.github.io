@@ -1,6 +1,6 @@
 import { ExperienceProps } from "../../../models/Data";
 import { getExperienceData } from "../../../utils/DataProvider";
-import { Row } from './../../../models/Table.d';
+import { Row, TableProps } from './../../../models/Table.d';
 
 const mapExperience = (props: ExperienceProps): Row => {
     return {
@@ -10,7 +10,7 @@ const mapExperience = (props: ExperienceProps): Row => {
     };
 };
 
-export const getExperienceList = (): Row[] => {
+export const getExperienceTableProps = (): TableProps => {
     const props = getExperienceData();
-    return Object.values(props.list).map((e) => mapExperience(e));
+    return { rows: Object.values(props.list).map((e) => mapExperience(e)) };
 };

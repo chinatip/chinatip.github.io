@@ -1,7 +1,7 @@
 import { Grid, List, ListItem, ListItemText } from '@material-ui/core';
 import React from 'react';
 import styled from 'styled-components';
-import { Row } from './../../models/Table.d';
+import { Row, TableProps } from './../../models/Table.d';
 
 const GridContainer = styled(Grid)`
     margin: 0 auto;
@@ -14,7 +14,7 @@ const ListItemWrapper = styled.div`
     border: 1px solid blue;
 `;
 
-const Table = (rows: Row[]) => {
+const Table = (props: TableProps) => {
     const [selectIndex, setIndex] = React.useState(0);
     
     const handleOnClick = (index: number) => () => {
@@ -33,11 +33,11 @@ const Table = (rows: Row[]) => {
         <GridContainer container xs={12}>
             <Grid item sm={6}>
                 <List>
-                    {Object.values(rows).map((e, i) => renderRow(e, i))}
+                    {Object.values(props.rows).map((e, i) => renderRow(e, i))}
                 </List>
             </Grid>
             <Grid item sm={6}>
-                {rows[selectIndex].detail}
+                {props.rows[selectIndex].detail}
             </Grid>
         </GridContainer>
     );

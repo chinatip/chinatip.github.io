@@ -32,7 +32,7 @@ export interface ProjectSectionProps extends SectionProps {
     list: Project[];
 }
 
-export interface ProjectProps {
+export interface Project {
     name: string;
     description: string;
     tags: string[];

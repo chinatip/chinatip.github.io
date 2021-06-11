@@ -8,7 +8,7 @@ const Wrapper = styled(Grid)`
     overflow: auto;
 `;
 
-const AboutMe = () => {
+const AboutMeSection = () => {
     return (
         <Wrapper
             container
@@ -24,4 +24,5 @@ const AboutMe = () => {
     );
 };
 
-export default AboutMe;
+AboutMeSection.displayName = 'AboutMeSection';
+export default AboutMeSection;

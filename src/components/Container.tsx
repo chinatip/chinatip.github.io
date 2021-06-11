@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import AboutMe from './sections/aboutme/AboutMe';
-import Experiences from './sections/experiences/Experiences';
+import AboutMeSection from './sections/aboutme/AboutMeSection';
+import ExperiencesSection from './sections/experiences/ExperiencesSection';
 import { Data } from '../models/Data';
-import Projects from './sections/projects/Projects';
+import ProjectsSection from './sections/projects/ProjectsSection';
 
 const Wrapper = styled.div`
     display: flex;
@@ -17,9 +17,9 @@ const Wrapper = styled.div`
 const Container = (data: Data) => {
     return (
         <Wrapper>
-            <AboutMe />
-            <Experiences />
-            <Projects />
+            <AboutMeSection />
+            <ExperiencesSection />
+            <ProjectsSection />
         </Wrapper>
     );
 };

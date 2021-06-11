@@ -1,10 +1,10 @@
 import { Grid, Typography } from '@material-ui/core';
 import { Desktop } from '../../../utils/BreakpointHelper';
-import { getAboutMeData } from '../../../utils/DataProvider';
+import { getAboutMeProps } from '../../../utils/DataProvider';
 import Contact from '../../common/Contact';
 
 const IntroAndContact = () => {
-    const props = getAboutMeData();
+    const props = getAboutMeProps();
 
     return (
         <Grid item xs={12} md={8}>

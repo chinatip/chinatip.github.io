@@ -1,9 +1,9 @@
 import { Project } from "../../../models/Data";
-import { getProjectData } from "../../../utils/DataProvider";
+import { getProjectProps } from "../../../utils/DataProvider";
 import { Row } from '../../../models/Table';
-import { TableProps } from './../../../models/Table.d';
+import { TableProps } from '../../../models/Table';
 
-const mapProject = (props: Project): Row => {
+const mapProjectToRow = (props: Project): Row => {
     return {
         title: props.name,
         subtitle: props.description,
@@ -12,6 +12,6 @@ const mapProject = (props: Project): Row => {
 };
 
 export const getProjectTableProps = (): TableProps => {
-    const props = getProjectData();
-    return { rows: Object.values(props.list).map((e) => mapProject(e)) };
+    const props = getProjectProps();
+    return { rows: Object.values(props.list).map((e) => mapProjectToRow(e)) };
 };

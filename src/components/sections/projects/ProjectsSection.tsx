@@ -2,7 +2,7 @@ import { Grid, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import Table from '../../common/Table';
 import { Desktop, Mobile } from '../../../utils/BreakpointHelper';
-import { getProjectData } from '../../../utils/DataProvider';
+import { getProjectProps } from '../../../utils/DataProvider';
 import { getProjectTableProps } from './ProjectListHelper';
 
 const Wrapper = styled(Grid)`
@@ -11,7 +11,7 @@ const Wrapper = styled(Grid)`
 
 
 const ProjectsSection = () => {
-    const props = getProjectData();
+    const props = getProjectProps();
 
     const renderTable = () => (
         <Desktop>
@@ -39,6 +39,5 @@ const ProjectsSection = () => {
         </Wrapper>
     );
 };
-
 ProjectsSection.displayName = 'ProjectsSection';
 export default ProjectsSection;

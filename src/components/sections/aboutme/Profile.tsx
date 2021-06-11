@@ -3,10 +3,10 @@ import { Typography } from '@material-ui/core';
 import ProfileImage from '../../common/ProfileImage';
 import { Mobile } from '../../../utils/BreakpointHelper';
 import Contact from '../../common/Contact';
-import { getAboutMeData } from '../../../utils/DataProvider';
+import { getAboutMeProps } from '../../../utils/DataProvider';
 
 const Profile = () => {
-    const props = getAboutMeData();
+    const props = getAboutMeProps();
 
     return (
         <Grid

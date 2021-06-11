@@ -3,6 +3,8 @@ import AboutMeSection from './sections/aboutme/AboutMeSection';
 import ExperiencesSection from './sections/experiences/ExperiencesSection';
 import { Data } from '../models/Data';
 import ProjectsSection from './sections/projects/ProjectsSection';
+import EducationSection from './sections/educations/EducationSection';
+import ActivitySection from './sections/activities/ActivitySection';
 
 const Wrapper = styled.div`
     display: flex;
@@ -20,6 +22,8 @@ const Container = (data: Data) => {
             <AboutMeSection />
             <ExperiencesSection />
             <ProjectsSection />
+            <EducationSection />
+            <ActivitySection />
         </Wrapper>
     );
 };

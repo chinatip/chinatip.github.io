@@ -1,8 +1,8 @@
 import { Grid, Typography } from '@material-ui/core';
 import styled from 'styled-components';
-import { Desktop, Mobile } from '../../utils/BreakpointHelper';
+import { Desktop, Mobile } from '../../../utils/BreakpointHelper';
+import { getExperienceData } from '../../../utils/DataProvider';
 import ExperienceTable from './ExperienceTable';
-import { getExperienceData } from './../../utils/DataProvider';
 
 const Wrapper = styled(Grid)`
     padding: 20px 0;
@@ -33,9 +33,7 @@ const Experiences = () => {
 
     return (
         <Wrapper item container>
-            <Typography variant="h6">
-                {props.sectionName}
-            </Typography>
+            <Typography variant="h6">{props.sectionName}</Typography>
             {renderContent()}
         </Wrapper>
     );

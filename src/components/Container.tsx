@@ -1,12 +1,16 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import AboutMe from './AboutMe/AboutMe';
 import styled from 'styled-components';
+import Grid from '@material-ui/core/Grid';
+import AboutMe from './sections/aboutme/AboutMe';
+import Experiences from './sections/experiences/Experiences';
 import { Data } from '../models/Data';
-import Experiences from './Experiences/Experiences';
 
 const Wrapper = styled.div`
     display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 12px;
     justify-content: center;
     align-items: center;
 `;
@@ -14,13 +18,8 @@ const Wrapper = styled.div`
 const Container = (data: Data) => {
     return (
         <Wrapper>
-            <Grid
-                container
-                xs={8}
-            >
-                <AboutMe />
-                <Experiences />
-            </Grid>
+            <AboutMe />
+            <Experiences />
         </Wrapper>
     );
 };

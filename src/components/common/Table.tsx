@@ -1,8 +1,7 @@
 import { Grid, List, ListItem, ListItemText } from '@material-ui/core';
 import React from 'react';
 import styled from 'styled-components';
-import { Experience } from '../../../models/Data';
-import { getExperienceData } from './../../../utils/DataProvider';
+import { Row } from './../../models/Table.d';
 
 const GridContainer = styled(Grid)`
     margin: 0 auto;
@@ -15,18 +14,17 @@ const ListItemWrapper = styled.div`
     border: 1px solid blue;
 `;
 
-const ExperienceTable = () => {
-    const props = getExperienceData();
+const Table = (rows: Row[]) => {
     const [selectIndex, setIndex] = React.useState(0);
     
     const handleOnClick = (index: number) => () => {
         setIndex(index);
     };
 
-    const renderRow = (row: Experience, i: number) => (
+    const renderRow = (row: Row, i: number) => (
         <ListItemWrapper>
             <ListItem key={i} onClick={handleOnClick(i)}>
-                <ListItemText primary={row.company} secondary={row.position} />
+                <ListItemText primary={row.title} secondary={row.subtitle} />
             </ListItem>
         </ListItemWrapper>
     );
@@ -35,14 +33,14 @@ const ExperienceTable = () => {
         <GridContainer container xs={12}>
             <Grid item sm={6}>
                 <List>
-                    {Object.values(props.list).map((e, i) => renderRow(e, i))}
+                    {Object.values(rows).map((e, i) => renderRow(e, i))}
                 </List>
             </Grid>
             <Grid item sm={6}>
-                {props.list[selectIndex].detail}
+                {rows[selectIndex].detail}
             </Grid>
         </GridContainer>
     );
 };
 
-export default ExperienceTable;
+export default Table;

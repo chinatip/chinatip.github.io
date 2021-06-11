@@ -1,9 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-import Grid from '@material-ui/core/Grid';
 import AboutMe from './sections/aboutme/AboutMe';
 import Experiences from './sections/experiences/Experiences';
 import { Data } from '../models/Data';
+import Projects from './sections/projects/Projects';
 
 const Wrapper = styled.div`
     display: flex;
@@ -20,6 +19,7 @@ const Container = (data: Data) => {
         <Wrapper>
             <AboutMe />
             <Experiences />
+            <Projects />
         </Wrapper>
     );
 };

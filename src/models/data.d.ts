@@ -1,14 +1,14 @@
 export interface Data {
-    aboutMe: AboutMeSection;
-    experiences: ExperienceSection;
-    projects: ProjectSection;
+    aboutMe: AboutMeSectionProps;
+    experiences: ExperienceSectionProps;
+    projects: ProjectSectionProps;
 }
 
-interface Section {
+interface SectionProps {
     sectionName: string;
 }
 
-export interface AboutMeSection extends Section {
+export interface AboutMeSectionProps extends SectionProps {
     image: string;
     name: string;
     position: string;
@@ -17,29 +17,29 @@ export interface AboutMeSection extends Section {
     subtitle: string;
 }
 
-export interface ExperienceSection extends Section {
+export interface ExperienceSectionProps extends SectionProps {
     list: Experience[];
 }
 
-export interface Experience {
+export interface ExperienceProps {
     company: string;
     position: string;
     duration: string;
     detail?: string;
 }
 
-export interface ProjectSection extends Section {
+export interface ProjectSectionProps extends SectionProps {
     list: Project[];
 }
 
-export interface Project {
+export interface ProjectProps {
     name: string;
     description: string;
     tags: string[];
-    detail: ProjectDetail;
+    detail: ProjectDetailProps;
 }
 
-export interface ProjectDetail {
+export interface ProjectDetailProps {
     description: string,
     location: string,
     time: string,

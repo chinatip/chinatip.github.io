@@ -2,17 +2,17 @@ import { Grid, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import Table from './../../common/Table';
 import { Desktop, Mobile } from '../../../utils/BreakpointHelper';
-import { getExperienceData } from '../../../utils/DataProvider';
-import { getExperienceList } from './ExperienceListHelper';
+import { getProjectData } from '../../../utils/DataProvider';
+import { getProjectList } from './ProjectListHelper';
 
 const Wrapper = styled(Grid)`
     padding: 20px 0;
 `;
 
 
-const Experiences = () => {
-    const props = getExperienceData();
-    const rows = getExperienceList();
+const Projects = () => {
+    const props = getProjectData();
+    const rows = getProjectList();
 
     const renderTable = () => (
         <Desktop>
@@ -41,4 +41,4 @@ const Experiences = () => {
     );
 };
 
-export default Experiences;
+export default Projects;

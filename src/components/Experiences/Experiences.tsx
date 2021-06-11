@@ -2,17 +2,19 @@ import { Grid, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import { Desktop, Mobile } from '../../utils/BreakpointHelper';
 import ExperienceTable from './ExperienceTable';
-import { ExperienceSection } from './../../models/Data.d';
+import { getExperienceData } from './../../utils/DataProvider';
 
 const Wrapper = styled(Grid)`
     padding: 20px 0;
 `;
 
 
-const Experiences = (props: ExperienceSection) => {
+const Experiences = () => {
+    const props = getExperienceData();
+
     const renderTable = () => (
         <Desktop>
-            <ExperienceTable {...props} />
+            <ExperienceTable />
         </Desktop>
     );
 

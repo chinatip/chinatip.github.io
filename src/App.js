@@ -1,11 +1,12 @@
 import Container from "./components/Container";
-import { getData } from './utils/DataMapper';
+import { AddData } from './utils/DataProvider';
 
 function App() {
-	const data = getData();
+	AddData();
+	
 	return (
 		<div className="App">
-			<Container {...data} />
+			<Container />
 		</div>
 	);
 }

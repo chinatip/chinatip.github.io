@@ -1,9 +1,11 @@
 import { Grid, Typography } from '@material-ui/core';
-import { AboutMeSection } from '../../models/Data';
 import { Desktop } from '../../utils/BreakpointHelper';
+import { getAboutMeData } from '../../utils/DataProvider';
 import Contact from './../common/Contact';
 
-const IntroAndContact = (props: AboutMeSection) => {
+const IntroAndContact = () => {
+    const props = getAboutMeData();
+    
     return (
         <Grid item xs={12} md={8}>
             <Typography variant="h6">

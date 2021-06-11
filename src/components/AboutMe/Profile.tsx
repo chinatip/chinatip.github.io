@@ -1,11 +1,13 @@
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 import ProfileImage from '../common/ProfileImage';
-import { AboutMeSection } from '../../models/Data';
 import { Mobile } from '../../utils/BreakpointHelper';
 import Contact from './../common/Contact';
+import { getAboutMeData } from '../../utils/DataProvider';
 
-const Profile = (props: AboutMeSection) => {
+const Profile = () => {
+    const props = getAboutMeData();
+
     return (
         <Grid
             container

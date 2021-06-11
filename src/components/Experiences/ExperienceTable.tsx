@@ -1,7 +1,10 @@
 import { Grid, List, ListItem, ListItemText } from '@material-ui/core';
-import { Experience, ExperienceSection } from './../../models/Data.d';
+import { getExperienceData } from '../../utils/DataProvider';
+import { Experience } from './../../models/Data.d';
 
-const ExperienceTable = (props: ExperienceSection) => {
+const ExperienceTable = () => {
+    const props = getExperienceData();
+
     const renderRow = (row: Experience, i: number) => (
         <ListItem key={i}>
             <ListItemText primary={row.company} secondary={row.position} />

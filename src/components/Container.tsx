@@ -12,15 +12,14 @@ const Wrapper = styled.div`
 `;
 
 const Container = (data: Data) => {
-    console.log(data.projects)
     return (
         <Wrapper>
             <Grid
                 container
                 xs={8}
             >
-                <AboutMe {...data.aboutMe} />
-                <Experiences {...data.experiences}/>
+                <AboutMe />
+                <Experiences />
             </Grid>
         </Wrapper>
     );

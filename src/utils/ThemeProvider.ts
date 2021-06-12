@@ -1,20 +1,22 @@
 const mint: string = '#c7ffd8';
-const blue: string = '#161d6f';
-const grey: string = '#f6f6f6';
-const ocean: string = '#98ded9';
+const deepBlue: string = '#1f3373';
+const blue: string = '#367cff';
+const grey: string = '#f8f9fb';
+const greyBlue: string = '#c0c4d4';
+const fadedBlue: string = '#98ded9';
+const white: string = '#fff';
 
 export enum ColorType {
+    title = 'title',
+    subtitle = 'subtitle',
+    bodyText = 'bodyText',
+    background = 'background',
     sectionName = 'sectionName',
     cardBackground = 'cardBackground',
     cardTitle = 'cardTitle',
     cardSubtitle = 'cardSubtitle',
     cardCaption = 'cardCaption',
     cardContent = 'cardContent',
-    title = 'title',
-    subtitle = 'subtitle',
-    bodyText = 'bodyText',
-    caption = 'caption',
-    background = 'background',
     tableBackground = 'tableBackground',
     tableMenuBackground = 'tableMenuBackground',
     tableMenuTitle = 'tableMenuTitle',
@@ -24,17 +26,16 @@ export enum ColorType {
 }
 
 interface ThemeProps {
+    [ColorType.title]: string;
+    [ColorType.subtitle]: string;
+    [ColorType.bodyText]: string;
+    [ColorType.background]: string;
     [ColorType.sectionName]: string;
     [ColorType.cardBackground]: string;
     [ColorType.cardTitle]: string;
     [ColorType.cardSubtitle]: string;
     [ColorType.cardCaption]: string;
     [ColorType.cardContent]: string;
-    [ColorType.title]: string;
-    [ColorType.subtitle]: string;
-    [ColorType.bodyText]: string;
-    [ColorType.caption]: string;
-    [ColorType.background]: string;
     [ColorType.tableBackground]: string;
     [ColorType.tableMenuBackground]: string;
     [ColorType.tableMenuTitle]: string;
@@ -44,23 +45,22 @@ interface ThemeProps {
 }
 
 const defaultTheme: ThemeProps = {
-    [ColorType.sectionName]: ocean,
-    [ColorType.cardBackground]: grey,
-    [ColorType.cardTitle]: ocean,
-    [ColorType.cardSubtitle]: blue,
-    [ColorType.cardCaption]: ocean,
-    [ColorType.cardContent]: blue,
-    [ColorType.title]: blue,
-    [ColorType.subtitle]: ocean,
-    [ColorType.bodyText]: blue,
-    [ColorType.caption]: grey,
-    [ColorType.background]: grey,
-    [ColorType.tableBackground]: mint,
-    [ColorType.tableMenuBackground]: grey,
-    [ColorType.tableMenuTitle]: blue,
-    [ColorType.tableMenuSubtitle]: ocean,
-    [ColorType.tableContentText]: blue,
-    [ColorType.tableContentBackground]: ocean,
+    [ColorType.title]: deepBlue,
+    [ColorType.subtitle]: deepBlue,
+    [ColorType.bodyText]: deepBlue,
+    [ColorType.background]: white,
+    [ColorType.sectionName]: deepBlue,
+    [ColorType.cardBackground]: white,
+    [ColorType.cardTitle]: deepBlue,
+    [ColorType.cardSubtitle]: deepBlue,
+    [ColorType.cardCaption]: greyBlue,
+    [ColorType.cardContent]: deepBlue,
+    [ColorType.tableBackground]: grey,
+    [ColorType.tableMenuBackground]: white,
+    [ColorType.tableMenuTitle]: deepBlue,
+    [ColorType.tableMenuSubtitle]: greyBlue,
+    [ColorType.tableContentText]: deepBlue,
+    [ColorType.tableContentBackground]: white,
 };
 
 let self: ThemeProps = defaultTheme;

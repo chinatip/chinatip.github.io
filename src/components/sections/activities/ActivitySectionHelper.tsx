@@ -4,7 +4,9 @@ import { CardProps } from '../../../models/Card';
 
 const mapActivityToCard = (props: Activity): CardProps => {
     return {
-        content: <div>ActivityContent</div>
+        title: props.name,
+        subtitle: props.duration,
+        description: props.description
     };
 };
 

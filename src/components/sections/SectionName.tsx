@@ -7,7 +7,9 @@ const Wrapper = styled(Grid)`
 
 export const Section = ({ sectionName, children }: any) => (
     <Wrapper item container>
-        <Typography variant="h6">{sectionName}</Typography>
+        <Grid xs={12}>
+            <Typography variant="h6">{sectionName}</Typography>
+        </Grid>
         {children}
     </Wrapper>
 );

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { CardProps } from './../../models/Card.d';
 
 const Container = styled(MaterialUICard)`
+    width: 100%;
     border: 1px solid red;
 `;
 const HeaderContainer = styled.div`
@@ -13,20 +14,20 @@ const ContentContainer = styled.div`
 const Card = (props: CardProps) => {
     if (!props) return null;
 
-    const header = props.header && (
-        <HeaderContainer>
-            <Typography variant="h6">{props.header.title}</Typography>
-            <Typography variant="body1">{props.header.subtitle}</Typography>
-        </HeaderContainer>
-    );
-
+    const { title, subtitle, description, content, tags } = props;
     return (
         <Container>
             <CardContent>
-                {header}
-                <ContentContainer>
-                    {props.content}
-                </ContentContainer>
+                <HeaderContainer>
+                    <Typography variant="h6">{title}</Typography>
+                    <Typography variant="body1">{subtitle}</Typography>
+                    {description && <Typography variant="body1">{description}</Typography>}
+                </HeaderContainer>
+                {content && (
+                    <ContentContainer>
+                        {props.content}
+                    </ContentContainer>
+                )}
             </CardContent>
         </Container>
     );

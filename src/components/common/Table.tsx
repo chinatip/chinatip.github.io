@@ -5,15 +5,19 @@ import { Row, TableProps } from './../../models/Table.d';
 
 const GridContainer = styled(Grid)`
     margin: 0 auto;
-    max-height: 400px;
     border: 1px solid red;
     display: flex;
 `;
 
 const MenuContainer = styled(Box)`
     display: flex;
-    flex: 1;
+    width: 250px;
+    min-width: 250px;
     overflow-y: auto;
+
+    .MuiList-root {
+        width: 100%;
+    }
 `;
 
 const DetailContainer = styled(Box)`
@@ -21,7 +25,6 @@ const DetailContainer = styled(Box)`
 `;
 
 const ListItemWrapper = styled.div`
-    max-width: 240px;
     margin-left: 8px;
     margin-bottom: 8px;
     border: 1px solid blue;
@@ -29,13 +32,11 @@ const ListItemWrapper = styled.div`
     &:last-child {
         margin-bottom: 0;
     }
-`;
 
-const ListItemContainer = styled(ListItemText)`
-    max-width: 240px;
-    cursor: pointer;
+    .MuiListItem-gutters {
+        cursor: pointer;
+    }
 `;
-
 
 const Table = (props: TableProps) => {
     const [selectIndex, setIndex] = React.useState(0);
@@ -47,7 +48,7 @@ const Table = (props: TableProps) => {
     const renderRow = (row: Row, i: number) => (
         <ListItemWrapper>
             <ListItem key={i} onClick={handleOnClick(i)}>
-                <ListItemContainer primary={row.title} secondary={row.subtitle} />
+                <ListItemText primary={row.title} secondary={row.subtitle} />
             </ListItem>
         </ListItemWrapper>
     );

@@ -1,14 +1,17 @@
 import { getEducationList } from './EducationHelper';
 import Card from './../../common/Card';
+import { Section } from './../SectionName';
+import { getEducationProps } from '../../../utils/DataProvider';
 
 const EducationSection = () => {
+    const props = getEducationProps();
     const list = getEducationList();
     
     return (
-        <div>
+        <Section sectionName={props.sectionName}>
             {list.map(c => <Card {...c} />)}
-        </div>
-    )
+        </Section>
+    );
 };
 
 EducationSection.displayName = 'EducationSection';

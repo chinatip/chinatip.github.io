@@ -1,42 +1,15 @@
-import { Grid, Typography } from '@material-ui/core';
-import styled from 'styled-components';
 import Table from '../../common/Table';
-import { Desktop, Mobile } from '../../../utils/BreakpointHelper';
 import { getProjectProps } from '../../../utils/DataProvider';
 import { getProjectTableProps } from './ProjectListHelper';
-
-const Wrapper = styled(Grid)`
-    padding: 20px 0;
-`;
-
+import { Section } from './../SectionName';
 
 const ProjectsSection = () => {
     const props = getProjectProps();
 
-    const renderTable = () => (
-        <Desktop>
-            <Table {...getProjectTableProps()} />
-        </Desktop>
-    );
-
-    const renderList = () => (
-        <Mobile>
-            smup
-        </Mobile>
-    );
-
-    const renderContent = () => (
-        <>
-            {renderList()}
-            {renderTable()}
-        </>
-    );
-
     return (
-        <Wrapper item container>
-            <Typography variant="h6">{props.sectionName}</Typography>
-            {renderContent()}
-        </Wrapper>
+        <Section sectionName={props.sectionName}>
+            <Table {...getProjectTableProps()} />
+        </Section>
     );
 };
 ProjectsSection.displayName = 'ProjectsSection';

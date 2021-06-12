@@ -1,18 +1,41 @@
-import { Grid, List, ListItem, ListItemText } from '@material-ui/core';
+import { Box, Grid, List, ListItem, ListItemText } from '@material-ui/core';
 import React from 'react';
 import styled from 'styled-components';
 import { Row, TableProps } from './../../models/Table.d';
 
 const GridContainer = styled(Grid)`
     margin: 0 auto;
+    max-height: 400px;
     border: 1px solid red;
+    display: flex;
+`;
+
+const MenuContainer = styled(Box)`
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+`;
+
+const DetailContainer = styled(Box)`
+    overflow-y: auto;
 `;
 
 const ListItemWrapper = styled.div`
     max-width: 240px;
-    cursor: pointer;
+    margin-left: 8px;
+    margin-bottom: 8px;
     border: 1px solid blue;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 `;
+
+const ListItemContainer = styled(ListItemText)`
+    max-width: 240px;
+    cursor: pointer;
+`;
+
 
 const Table = (props: TableProps) => {
     const [selectIndex, setIndex] = React.useState(0);
@@ -24,21 +47,21 @@ const Table = (props: TableProps) => {
     const renderRow = (row: Row, i: number) => (
         <ListItemWrapper>
             <ListItem key={i} onClick={handleOnClick(i)}>
-                <ListItemText primary={row.title} secondary={row.subtitle} />
+                <ListItemContainer primary={row.title} secondary={row.subtitle} />
             </ListItem>
         </ListItemWrapper>
     );
 
     return (
-        <GridContainer container xs={12}>
-            <Grid item sm={6}>
+        <GridContainer item xs={12}>
+            <MenuContainer>
                 <List>
                     {Object.values(props.rows).map((e, i) => renderRow(e, i))}
                 </List>
-            </Grid>
-            <Grid item sm={6}>
+            </MenuContainer>
+            <DetailContainer>
                 {props.rows[selectIndex].detail}
-            </Grid>
+            </DetailContainer>
         </GridContainer>
     );
 };

@@ -9,6 +9,7 @@ const Container = styled(MaterialUICard)`
 const HeaderContainer = styled.div`
 `;
 const ContentContainer = styled.div`
+    margin-top: 8px;
 `;
 
 const Card = (props: CardProps) => {
@@ -19,13 +20,15 @@ const Card = (props: CardProps) => {
         <Container>
             <CardContent>
                 <HeaderContainer>
-                    <Typography variant="h6">{title}</Typography>
-                    <Typography variant="body1">{subtitle}</Typography>
-                    {description && <Typography variant="body1">{description}</Typography>}
+                    <Typography variant="body1">{title}</Typography>
+                    <Typography variant="caption">{subtitle}</Typography>
+                    {description && <Typography variant="body2">{description}</Typography>}
                 </HeaderContainer>
                 {content && (
                     <ContentContainer>
-                        {props.content}
+                        <Typography variant="body2">
+                            {props.content}
+                        </Typography>
                     </ContentContainer>
                 )}
             </CardContent>

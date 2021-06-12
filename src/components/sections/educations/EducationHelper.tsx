@@ -4,9 +4,9 @@ import { CardProps } from '../../../models/Card';
 
 const mapEducationToCard = (props: Education): CardProps => {
     return {
-        title: props.degree + props.fieldOfStudy,
+        title: props.degree,
         subtitle: props.school,
-        content: props.duration
+        description: props.duration,
     };
 };
 

@@ -6,7 +6,7 @@ const mapActivityToCard = (props: Activity): CardProps => {
     return {
         title: props.name,
         subtitle: props.duration,
-        description: props.description
+        content: props.description
     };
 };
 

@@ -57,7 +57,7 @@ export interface ActivitySectionProps extends Section {
 export interface Activity {
     name: string;
     duration: string;
-    description: string;
+    description?: string;
 }
 
 export interface EducationSectionProps extends Section {
@@ -67,7 +67,7 @@ export interface EducationSectionProps extends Section {
 export interface Education {
     school: string;
     degree: string;
-    fieldOfStudy: string;
     duration: string;
     description: string;
 }
+

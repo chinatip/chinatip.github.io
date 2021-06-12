@@ -22,6 +22,10 @@ const MenuContainer = styled(Box)`
 
 const DetailContainer = styled(Box)`
     overflow-y: auto;
+    width: 100%;
+    margin: 8px;
+    padding: 16px;
+    border: 1px solid black;
 `;
 
 const ListItemWrapper = styled.div`

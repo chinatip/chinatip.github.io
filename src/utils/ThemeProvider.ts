@@ -12,11 +12,15 @@ export enum ColorType {
     cardContent = 'cardContent',
     title = 'title',
     subtitle = 'subtitle',
-    body = 'body',
+    bodyText = 'bodyText',
     caption = 'caption',
     background = 'background',
     tableBackground = 'tableBackground',
-    tableMenuItem = 'tableMenuItem',
+    tableMenuBackground = 'tableMenuBackground',
+    tableMenuTitle = 'tableMenuTitle',
+    tableMenuSubtitle = 'tableMenuSubtitle',
+    tableContentBackground = 'tableContentBackground',
+    tableContentText = 'tableContentText',
 }
 
 interface ThemeProps {
@@ -28,11 +32,15 @@ interface ThemeProps {
     [ColorType.cardContent]: string;
     [ColorType.title]: string;
     [ColorType.subtitle]: string;
-    [ColorType.body]: string;
+    [ColorType.bodyText]: string;
     [ColorType.caption]: string;
     [ColorType.background]: string;
     [ColorType.tableBackground]: string;
-    [ColorType.tableMenuItem]: string;
+    [ColorType.tableMenuBackground]: string;
+    [ColorType.tableMenuTitle]: string;
+    [ColorType.tableMenuSubtitle]: string;
+    [ColorType.tableContentText]: string;
+    [ColorType.tableContentBackground]: string;
 }
 
 const defaultTheme: ThemeProps = {
@@ -44,11 +52,15 @@ const defaultTheme: ThemeProps = {
     [ColorType.cardContent]: blue,
     [ColorType.title]: blue,
     [ColorType.subtitle]: ocean,
-    [ColorType.body]: blue,
+    [ColorType.bodyText]: blue,
     [ColorType.caption]: grey,
     [ColorType.background]: grey,
     [ColorType.tableBackground]: mint,
-    [ColorType.tableMenuItem]: grey,
+    [ColorType.tableMenuBackground]: grey,
+    [ColorType.tableMenuTitle]: blue,
+    [ColorType.tableMenuSubtitle]: ocean,
+    [ColorType.tableContentText]: blue,
+    [ColorType.tableContentBackground]: ocean,
 };
 
 let self: ThemeProps = defaultTheme;

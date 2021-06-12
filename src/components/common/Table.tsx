@@ -15,7 +15,6 @@ const TableContainer = styled(Card)`
 
 const GridContainer = styled(Grid)`
     margin: 0 auto;
-    // border: 1px solid red;
     display: flex;
 `;
 
@@ -35,7 +34,8 @@ const DetailContainer = styled.div`
     width: 100%;
     margin: 8px;
     padding: 16px;
-    background: white;
+    background: ${getColor(ColorType.tableContentBackground)};
+    color: ${getColor(ColorType.tableContentText)};
     ${borderStyle}
 `;
 
@@ -50,7 +50,15 @@ const ListItemWrapper = styled(Card)`
 
     .MuiListItem-gutters {
         cursor: pointer;
-        background: ${getColor(ColorType.tableMenuItem)};
+        background: ${getColor(ColorType.tableMenuBackground)};
+    }
+
+    .MuiListItemText-primary {
+        color: ${getColor(ColorType.tableMenuTitle)};
+    }
+
+    .MuiListItemText-secondary {
+        color: ${getColor(ColorType.tableMenuSubtitle)};
     }
 `;
 

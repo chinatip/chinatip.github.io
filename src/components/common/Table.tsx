@@ -1,6 +1,7 @@
 import { Card, Grid, List, ListItem, ListItemText } from '@material-ui/core';
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { ColorType, getColor } from '../../utils/ThemeProvider';
 import { Row, TableProps } from './../../models/Table.d';
 
 const borderStyle = css`
@@ -9,7 +10,7 @@ const borderStyle = css`
 
 const TableContainer = styled(Card)`
     width: 100%;
-    background: grey !important;
+    background: ${getColor(ColorType.tableBackground)} !important;
 `;
 
 const GridContainer = styled(Grid)`
@@ -49,7 +50,7 @@ const ListItemWrapper = styled(Card)`
 
     .MuiListItem-gutters {
         cursor: pointer;
-        background: green;
+        background: ${getColor(ColorType.tableMenuItem)};
     }
 `;
 

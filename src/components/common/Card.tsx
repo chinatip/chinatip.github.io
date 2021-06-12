@@ -1,12 +1,28 @@
 import { Card as MaterialUICard, CardContent, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import { CardProps } from './../../models/Card.d';
+import { ColorType, getColor } from './../../utils/ThemeProvider';
 
 const Container = styled(MaterialUICard)`
-    // border: 1px solid red;
+    background: ${getColor(ColorType.cardBackground)} !important;
 `;
-const HeaderContainer = styled.div`
+
+const TitleText = styled(Typography)`
+    color: ${getColor(ColorType.cardTitle)};
 `;
+
+const SubtitleText = styled(Typography)`
+    color: ${getColor(ColorType.cardSubtitle)};
+`;
+
+const DescriptionText = styled(Typography)`
+    color: ${getColor(ColorType.cardCaption)};
+`;
+
+const ContentText = styled(Typography)`
+    color: ${getColor(ColorType.cardContent)};
+`;
+
 const ContentContainer = styled.div`
     margin-top: 8px;
 `;
@@ -18,16 +34,12 @@ const Card = (props: CardProps) => {
     return (
         <Container>
             <CardContent>
-                <HeaderContainer>
-                    <Typography variant="body1">{title}</Typography>
-                    <Typography variant="caption">{subtitle}</Typography>
-                    {description && <Typography variant="body2">{description}</Typography>}
-                </HeaderContainer>
+                <TitleText variant="body1">{title}</TitleText>
+                <SubtitleText variant="caption">{subtitle}</SubtitleText>
+                {description && <DescriptionText variant="body2">{description}</DescriptionText>}
                 {content && (
                     <ContentContainer>
-                        <Typography variant="body2">
-                            {props.content}
-                        </Typography>
+                        <ContentText variant="body2">{props.content}</ContentText>
                     </ContentContainer>
                 )}
             </CardContent>

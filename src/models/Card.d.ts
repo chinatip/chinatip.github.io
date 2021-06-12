@@ -1,3 +1,7 @@
+export interface CardListProps {
+    list: CardProps[];
+}
+
 export interface CardProps {
     title: string;
     subtitle: string;

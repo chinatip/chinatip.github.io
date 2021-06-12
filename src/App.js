@@ -1,13 +1,18 @@
+import styled from "styled-components";
 import Container from "./components/Container";
 import { AddData } from './utils/DataProvider';
+
+const AppContainer = styled.div`
+	background: #f9f9f9;
+`;
 
 function App() {
 	AddData();
 	
 	return (
-		<div className="App">
+		<AppContainer className="App">
 			<Container />
-		</div>
+		</AppContainer>
 	);
 }
 

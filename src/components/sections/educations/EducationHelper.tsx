@@ -1,6 +1,6 @@
 import { getEducationProps } from "../../../utils/DataProvider";
 import { Education } from '../../../models/Data';
-import { CardProps } from '../../../models/Card';
+import { CardListProps, CardProps } from '../../../models/Card';
 
 const mapEducationToCard = (props: Education): CardProps => {
     return {
@@ -10,8 +10,8 @@ const mapEducationToCard = (props: Education): CardProps => {
     };
 };
 
-export const getEducationList = (): CardProps[] => {
+export const getEducationList = (): CardListProps => {
     const props = getEducationProps();
 
-    return Object.values(props.list).map((e) => mapEducationToCard(e))
+    return { list: Object.values(props.list).map((e) => mapEducationToCard(e)) };
 }

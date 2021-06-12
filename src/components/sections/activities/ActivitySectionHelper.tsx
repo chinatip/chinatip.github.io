@@ -1,6 +1,6 @@
 import { getActivityProps } from "../../../utils/DataProvider";
 import { Activity } from '../../../models/Data';
-import { CardProps } from '../../../models/Card';
+import { CardListProps, CardProps } from '../../../models/Card';
 
 const mapActivityToCard = (props: Activity): CardProps => {
     return {
@@ -10,8 +10,8 @@ const mapActivityToCard = (props: Activity): CardProps => {
     };
 };
 
-export const getActivityList = (): CardProps[] => {
+export const getActivityList = (): CardListProps => {
     const props = getActivityProps();
 
-    return Object.values(props.list).map((e) => mapActivityToCard(e))
+    return { list: Object.values(props.list).map((e) => mapActivityToCard(e)) };
 }

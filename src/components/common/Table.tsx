@@ -1,15 +1,24 @@
-import { Box, Grid, List, ListItem, ListItemText } from '@material-ui/core';
+import { Card, Grid, List, ListItem, ListItemText } from '@material-ui/core';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Row, TableProps } from './../../models/Table.d';
+
+const borderStyle = css`
+    border-radius: 4px;
+`;
+
+const TableContainer = styled(Card)`
+    width: 100%;
+    background: grey !important;
+`;
 
 const GridContainer = styled(Grid)`
     margin: 0 auto;
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
 `;
 
-const MenuContainer = styled(Box)`
+const MenuContainer = styled.div`
     display: flex;
     width: 250px;
     min-width: 250px;
@@ -20,18 +29,19 @@ const MenuContainer = styled(Box)`
     }
 `;
 
-const DetailContainer = styled(Box)`
+const DetailContainer = styled.div`
     overflow-y: auto;
     width: 100%;
     margin: 8px;
     padding: 16px;
-    border: 1px solid black;
+    background: white;
+    ${borderStyle}
 `;
 
-const ListItemWrapper = styled.div`
+const ListItemWrapper = styled(Card)`
     margin-left: 8px;
     margin-bottom: 8px;
-    border: 1px solid blue;
+    ${borderStyle}
 
     &:last-child {
         margin-bottom: 0;
@@ -39,6 +49,7 @@ const ListItemWrapper = styled.div`
 
     .MuiListItem-gutters {
         cursor: pointer;
+        background: green;
     }
 `;
 
@@ -58,16 +69,18 @@ const Table = (props: TableProps) => {
     );
 
     return (
-        <GridContainer item xs={12}>
-            <MenuContainer>
-                <List>
-                    {Object.values(props.rows).map((e, i) => renderRow(e, i))}
-                </List>
-            </MenuContainer>
-            <DetailContainer>
-                {props.rows[selectIndex].detail}
-            </DetailContainer>
-        </GridContainer>
+        <TableContainer>
+            <GridContainer item xs={12}>
+                <MenuContainer>
+                    <List>
+                        {Object.values(props.rows).map((e, i) => renderRow(e, i))}
+                    </List>
+                </MenuContainer>
+                <DetailContainer>
+                    {props.rows[selectIndex].detail}
+                </DetailContainer>
+            </GridContainer>
+        </TableContainer>
     );
 };
 

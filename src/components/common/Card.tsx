@@ -19,6 +19,14 @@ const DescriptionText = styled(Typography)`
     color: ${getColor(ColorType.cardCaption)};
 `;
 
+const ContentTextWrapper = styled.div`
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin: 0;
+    }
+`;
+
 const ContentText = styled(Typography)`
     color: ${getColor(ColorType.cardContent)};
 `;
@@ -39,7 +47,11 @@ const Card = (props: CardProps) => {
                 {description && <DescriptionText variant="body2">{description}</DescriptionText>}
                 {content && (
                     <ContentContainer>
-                        <ContentText variant="body2">{props.content}</ContentText>
+                        {content.map(c => (
+                            <ContentTextWrapper>
+                                <ContentText variant="body2">{`- ${c}`}</ContentText>
+                            </ContentTextWrapper>
+                        ))}
                     </ContentContainer>
                 )}
             </CardContent>

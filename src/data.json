@@ -6,7 +6,7 @@
         "position": "Full Stack Engineer",
         "company": "Agoda",
         "title": "Hello,",
-        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."        
+        "subtitle": "I'm Chinatip. I am eager to learn new things and willing to improve myself!"        
     },
     "experiences": {
         "sectionName": "Experiences",
@@ -14,18 +14,26 @@
             {
                 "company": "Agoda",
                 "position": "Full Stack Engineer",
-                "duration": "Aug 2018 - Now"
+                "duration": "Aug 2018 - Now",
+                "detail": [
+                    "Web application development using React with TypeScript and unit testing, integration testing, data tracking, and releasing",
+                    "Contribute in writing and designing API and Web automate test scripts",
+                    "Aggregating big data for building user loyalty models",
+                    "Test-driven development for every implementation to support A/B experimentation and white labeling products",
+                    "Contributed to the development and continuous enhancement of loyalty related products such as AgodaVIP, AgodaCash, and Cashback"
+                ]
             },
             {
                 "company": "Cleverse",
                 "position": "Frontend Web Developer",
                 "duration": "Dec 2017 - Feb 2018",
-                "detail": "Visualizing data using ECharts and ReactJS, developing forms and landing pages using React"
+                "detail": ["Visualizing data using ECharts and ReactJS", "Developing forms and landing pages using React"]
             },
             {
                 "company": "Cleverse",
                 "position": "Intern",
-                "duration": "June 2017 - Dec 2017"
+                "duration": "June 2017 - Dec 2017",
+                "detail": ["Visualizing data using ECharts and ReactJS", "Developing forms and landing pages using React"]
             }
         ]
     },

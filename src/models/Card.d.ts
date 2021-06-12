@@ -8,5 +8,5 @@ export interface CardProps {
     description?: string;
     tags?: string[];
     link?: string[];
-    content?: string | JSX.Element;
+    content?: string[];
 }

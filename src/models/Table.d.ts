@@ -4,6 +4,7 @@ export interface TableProps {
 
 export interface Row {
     title: string;
-    subtitle: string | React.ReactNode;
-    detail: string | React.ReactNode;
+    subtitle: string;
+    description?: string;
+    detail?: string[];
 }

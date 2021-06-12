@@ -4,7 +4,7 @@ import IntroAndContact from './IntroAndContact';
 import styled from 'styled-components';
 
 const Wrapper = styled(Grid)`
-    padding: 60px 0;
+    padding-top: 60px;
     overflow: auto;
 `;
 

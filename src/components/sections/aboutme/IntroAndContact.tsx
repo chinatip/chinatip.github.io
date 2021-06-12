@@ -18,7 +18,7 @@ const IntroAndContact = () => {
 
     return (
         <Grid item xs={12} md={8}>
-            <Greeting variant="h6">{props.title}</Greeting>
+            <Greeting variant="h5">{props.title}</Greeting>
             <Content variant="body1">{props.subtitle}</Content>
             <Desktop>
                 <Contact />

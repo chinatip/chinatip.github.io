@@ -1,9 +1,11 @@
-import { Card, Grid, List, ListItem, ListItemText } from '@material-ui/core';
+import { Card, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { Desktop, Mobile } from '../../utils/BreakpointHelper';
 import { ColorType, getColor } from '../../utils/ThemeProvider';
 import { Row, TableProps } from './../../models/Table.d';
-
+import CardList from './CardList';
+import { formatTableToCardList } from './TableHelper';
 const borderStyle = css`
     border-radius: 4px;
 `;
@@ -18,10 +20,35 @@ const GridContainer = styled(Grid)`
     display: flex;
 `;
 
+const ContentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    width: 100%;
+    margin: 8px;
+    padding: 16px;
+    background: ${getColor(ColorType.tableContentBackground)};
+    ${borderStyle}
+`;
+
+const ContentTextWrapper = styled.div`
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin: 0;
+    }
+`;
+
+const ContentText = styled(Typography)`
+    color: ${getColor(ColorType.tableContentText)};
+`;
+
 const MenuContainer = styled.div`
     display: flex;
+    flex-direction: column;
     width: 250px;
     min-width: 250px;
+    padding: 8px;
     overflow-y: auto;
 
     .MuiList-root {
@@ -29,37 +56,28 @@ const MenuContainer = styled.div`
     }
 `;
 
-const DetailContainer = styled.div`
-    overflow-y: auto;
-    width: 100%;
-    margin: 8px;
-    padding: 16px;
-    background: ${getColor(ColorType.tableContentBackground)};
-    color: ${getColor(ColorType.tableContentText)};
-    ${borderStyle}
-`;
-
-const ListItemWrapper = styled(Card)`
-    margin-left: 8px;
+const MenuList = styled(Card)`
     margin-bottom: 8px;
     ${borderStyle}
 
     &:last-child {
         margin-bottom: 0;
     }
+`;
 
-    .MuiListItem-gutters {
-        cursor: pointer;
-        background: ${getColor(ColorType.tableMenuBackground)};
-    }
-
-    .MuiListItemText-primary {
-        color: ${getColor(ColorType.tableMenuTitle)};
-    }
-
-    .MuiListItemText-secondary {
-        color: ${getColor(ColorType.tableMenuSubtitle)};
-    }
+const MenuItem = styled.div`
+    padding: 8px 16px;
+    cursor: pointer;
+    background: ${getColor(ColorType.tableMenuBackground)};
+`;
+const MenuTitle = styled(Typography)`
+    color: ${getColor(ColorType.tableMenuTitle)};
+`;
+const MenuSubtitle = styled(Typography)`
+    color: ${getColor(ColorType.tableMenuSubtitle)};
+`;
+const MenuDescription = styled(Typography)`
+    color: ${getColor(ColorType.tableMenuSubtitle)};
 `;
 
 const Table = (props: TableProps) => {
@@ -70,26 +88,46 @@ const Table = (props: TableProps) => {
     };
 
     const renderRow = (row: Row, i: number) => (
-        <ListItemWrapper>
-            <ListItem key={i} onClick={handleOnClick(i)}>
-                <ListItemText primary={row.title} secondary={row.subtitle} />
-            </ListItem>
-        </ListItemWrapper>
+        <MenuList>
+            <MenuItem key={i} onClick={handleOnClick(i)}>
+                <MenuTitle variant="body1">{row.title}</MenuTitle>
+                <MenuSubtitle variant="body2">{row.subtitle}</MenuSubtitle>
+                <MenuDescription variant="caption">{row.description}</MenuDescription>
+            </MenuItem>
+        </MenuList>
     );
 
+    const renderContent = () => {
+        const content = props.rows[selectIndex].detail;
+        if (!content) return null;
+
+        const renderItem = (text: string) => (
+            <ContentTextWrapper>
+                <ContentText variant="body2">{`- ${text}`}</ContentText>
+            </ContentTextWrapper>
+        );
+
+        return content.map(c => renderItem(c));
+    };
+
     return (
-        <TableContainer>
-            <GridContainer item xs={12}>
-                <MenuContainer>
-                    <List>
-                        {Object.values(props.rows).map((e, i) => renderRow(e, i))}
-                    </List>
-                </MenuContainer>
-                <DetailContainer>
-                    {props.rows[selectIndex].detail}
-                </DetailContainer>
-            </GridContainer>
-        </TableContainer>
+        <>
+            <Desktop>
+                <TableContainer>
+                    <GridContainer item xs={12}>
+                        <MenuContainer>
+                            {Object.values(props.rows).map((e, i) => renderRow(e, i))}
+                        </MenuContainer>
+                        <ContentContainer>
+                            {renderContent()}
+                        </ContentContainer>
+                    </GridContainer>
+                </TableContainer>
+            </Desktop>
+            <Mobile>
+                <CardList {...formatTableToCardList(props)} />
+            </Mobile>
+        </>
     );
 };
 

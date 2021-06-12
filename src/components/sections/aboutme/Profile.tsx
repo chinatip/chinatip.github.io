@@ -30,7 +30,7 @@ const Profile = () => {
             alignItems="center"
         >
             <ProfileImage />
-            <Name variant="h5"> {props.name} </Name>
+            <Name variant="h4"> {props.name} </Name>
             <Position variant="subtitle1">{props.position}</Position>
             <Mobile>
                 <Contact />

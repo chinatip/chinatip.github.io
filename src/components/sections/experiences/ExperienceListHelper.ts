@@ -7,6 +7,7 @@ const mapExperienceToRow = (props: ExperienceProps): Row => {
         title: props.position,
         subtitle: props.company,
         detail: props.detail,
+        description: props.duration,
     };
 };
 

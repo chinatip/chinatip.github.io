@@ -27,7 +27,7 @@ export interface ExperienceProps {
     company: string;
     position: string;
     duration: string;
-    detail?: string;
+    detail?: string[];
 }
 
 export interface ProjectSectionProps extends Section {

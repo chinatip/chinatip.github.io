@@ -13,7 +13,7 @@ const Name = styled(Typography)`
 export const Section = ({ sectionName, children }: any) => (
     <Wrapper item container>
         <Grid xs={12}>
-            <Name variant="h6">{sectionName}</Name>
+            <Name variant="h5">{sectionName}</Name>
         </Grid>
         {children}
     </Wrapper>

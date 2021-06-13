@@ -8,7 +8,6 @@ import { ColorType } from "./utils/Constant";
 
 const AppContainer = styled.div`
 	position: relative;
-	padding: 40px 0; 
 	background: ${getColor(ColorType.background)};
 `;
 

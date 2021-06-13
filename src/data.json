@@ -94,5 +94,11 @@
                 "description": "Second-Class Honours"
             }
         ]
+    },
+    "contacts": {
+        "gitHub": "",
+        "linkedin": "",
+        "medium": "",
+        "email": ""
     }
 }

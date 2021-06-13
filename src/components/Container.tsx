@@ -6,6 +6,7 @@ import EducationSection from './sections/educations/EducationSection';
 import ActivitySection from './sections/activities/ActivitySection';
 import { getColor } from '../utils/ThemeProvider';
 import { ColorType } from '../utils/Constant';
+import { Desktop, Mobile } from './../utils/BreakpointHelper';
 
 const gradientBorder = css`
     border: 2px solid transparent;
@@ -16,7 +17,7 @@ const gradientBorder = css`
     mask-composite: exclude;
 `;
 
-const Wrapper = styled.div`
+const wrapperStyle = css`
     z-index: 1;
     position: relative;
     max-width: 800px;
@@ -25,20 +26,50 @@ const Wrapper = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 16px;
+`;
+const DesktopContainer = styled.div`
+    z-index: 1;
+    position: relative;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 40px 0;
+`;
+const DesktopWrapper = styled.div`
+    ${wrapperStyle}
     border: 4px solid ${getColor(ColorType.wrapperBorder)};
     border-radius: 4px;
 `;
-    
+
+const MobileContainer = styled.div`
+    ${wrapperStyle}
+`;
+
 const Container = () => {
-    return (
-        <Wrapper>
+    const sections = (
+        <>
             <AboutMeSection />
             <ExperiencesSection />
             <ProjectsSection />
             <EducationSection />
             <ActivitySection />
-        </Wrapper>
+        </>
+    );
+    
+    return (
+        <>
+            <Desktop>
+                <DesktopContainer>
+                    <DesktopWrapper>
+                        {sections}
+                    </DesktopWrapper>
+                </DesktopContainer>
+            </Desktop>
+            <Mobile>
+                <MobileContainer>
+                    {sections}
+                </MobileContainer>
+            </Mobile>
+        </>
     );
 };
 

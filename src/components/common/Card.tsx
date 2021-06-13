@@ -43,7 +43,7 @@ const Card = (props: CardProps) => {
     return (
         <Container>
             <CardContent>
-                <TitleText variant="body1">{title}</TitleText>
+                <TitleText variant="h5">{title}</TitleText>
                 <SubtitleText variant="body2">{subtitle}</SubtitleText>
                 {description && <DescriptionText variant="caption">{description}</DescriptionText>}
                 {content && (

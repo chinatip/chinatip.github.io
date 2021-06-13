@@ -4,6 +4,14 @@ export interface Data {
     projects: ProjectSectionProps;
     educations: EducationSectionProps;
     activities: ActivitySectionProps;
+    contacts: ContactProp;
+}
+
+export interface ContactProp {
+    gitHub: string;
+    linkedin: string;
+    medium: string;
+    email: string;
 }
 
 interface Section {

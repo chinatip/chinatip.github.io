@@ -4,6 +4,14 @@ export interface Data {
     projects: ProjectSectionProps;
     educations: EducationSectionProps;
     activities: ActivitySectionProps;
+    contacts: ContactProps;
+}
+
+export interface ContactProps {
+    gitHub: string;
+    linkedin: string;
+    medium: string;
+    email: string;
 }
 
 interface Section {
@@ -11,12 +19,9 @@ interface Section {
 }
 
 export interface AboutMeSectionProps extends Section {
-    image: string;
     name: string;
     position: string;
     company: string;
-    title: string;
-    subtitle: string;
 }
 
 export interface ExperienceSectionProps extends Section {

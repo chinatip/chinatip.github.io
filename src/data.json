@@ -1,12 +1,9 @@
 {
     "aboutMe": {
         "sectionName": "About Me",
-        "image": "",
         "name": "Chinatip Vichian",
         "position": "Full Stack Engineer",
-        "company": "Agoda",
-        "title": "Hello,",
-        "subtitle": "I'm Chinatip. I am eager to learn new things and willing to improve myself!"        
+        "company": "Agoda"
     },
     "experiences": {
         "sectionName": "Experiences",
@@ -14,7 +11,7 @@
             {
                 "company": "Agoda",
                 "position": "Full Stack Engineer",
-                "duration": "Aug 2018 - Now",
+                "duration": "Aug 2018 - Present",
                 "detail": [
                     "Web application development using React with TypeScript and unit testing, integration testing, data tracking, and releasing",
                     "Contribute in writing and designing API and Web automate test scripts",
@@ -25,14 +22,8 @@
             },
             {
                 "company": "Cleverse",
-                "position": "Frontend Web Developer",
-                "duration": "Dec 2017 - Feb 2018",
-                "detail": ["Visualizing data using ECharts and ReactJS", "Developing forms and landing pages using React"]
-            },
-            {
-                "company": "Cleverse",
-                "position": "Intern",
-                "duration": "June 2017 - Dec 2017",
+                "position": "Frontend Web Developer Part-Time & Intern",
+                "duration": "June 2017 - Feb 2018",
                 "detail": ["Visualizing data using ECharts and ReactJS", "Developing forms and landing pages using React"]
             }
         ]
@@ -42,7 +33,7 @@
         "list": [
             {
                 "name": "problem-solving",
-                "description": "Problem Solving Solutions",
+                "description": "Solutions for problems in Python2",
                 "tags": ["Python"],
                 "detail": {
                     "description": "My solutions for problems on Codeforces, HackerRank, and LeetCode using Python2",
@@ -63,18 +54,6 @@
                     "time": "2018",
                     "tags": ["React", "Express", "Ant Design", "JS"],
                     "links": ["https://github.com/chinatip/meet-dent-frontend", "https://github.com/chinatip/meet-dent-backend"]
-                }
-            },
-            {
-                "name": "My Stickers",
-                "description": "Sticker App",
-                "tags": ["Java"],
-                "detail": {
-                    "description": "Native android application expected to be able to add stickers to pictures and has its gallery",
-                    "location": "Project for Software Specification class",
-                    "time": "2018",
-                    "tags": ["Java"],
-                    "links": ["https://github.com/chinatip/My-Stickers"]
                 }
             },
             {
@@ -115,5 +94,11 @@
                 "description": "Second-Class Honours"
             }
         ]
+    },
+    "contacts": {
+        "gitHub": "https://github.com/chinatip",
+        "linkedin": "https://www.linkedin.com/in/chinatip-vichian/",
+        "medium": "https://medium.com/@chinatip",
+        "email": "chinatip.vichian@gmail.com"
     }
 }

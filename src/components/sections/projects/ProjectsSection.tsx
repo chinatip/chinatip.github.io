@@ -1,14 +1,14 @@
-import Table from '../../common/Table';
 import { getProjectProps } from '../../../utils/DataProvider';
-import { getProjectTableProps } from './ProjectListHelper';
+import { getProjectCardListProps } from './ProjectListHelper';
 import { Section } from './../SectionName';
+import CardList from './../../common/CardList';
 
 const ProjectsSection = () => {
     const props = getProjectProps();
 
     return (
         <Section sectionName={props.sectionName}>
-            <Table {...getProjectTableProps()} />
+            <CardList {...getProjectCardListProps()} />
         </Section>
     );
 };

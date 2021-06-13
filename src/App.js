@@ -18,7 +18,6 @@ function App() {
 		<AppContainer className="App">
 			<GlobalStyle />
 			<Container />
-			<Background />
 		</AppContainer>
 	);
 }

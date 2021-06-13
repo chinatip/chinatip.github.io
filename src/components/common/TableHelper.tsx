@@ -2,10 +2,11 @@
 import { Row, TableProps } from '../../models/Table';
 import { CardListProps, CardProps } from './../../models/Card.d';
 
-const formatRowToCard = ({ detail, description, title, subtitle }: Row): CardProps => ({
+const formatRowToCard = ({ detail, description, title, links, subtitle }: Row): CardProps => ({
     title,
     subtitle,
     description,
+    links,
     content: detail,
 });
 

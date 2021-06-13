@@ -9,6 +9,7 @@ const mapProjectToRow = (props: Project): Row => {
         title: props.name,
         subtitle: props.description,
         detail: props.detail.description ? [props.detail.description] : undefined,
+        links: props.detail.links,
     };
 };
 

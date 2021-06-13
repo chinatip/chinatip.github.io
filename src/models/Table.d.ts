@@ -7,4 +7,5 @@ export interface Row {
     subtitle: string;
     description?: string;
     detail?: string[];
+    links?: string[];
 }

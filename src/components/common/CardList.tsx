@@ -15,7 +15,11 @@ const horizontalContainerStyle = css`
 const horizontalCardStyle = css`
     min-width: 200px;
     width: 270px;
-    margin-right: 10px;
+    margin: 0 ${Sizing.S} ${Sizing.S} 0;
+
+    &:last-child {
+        margin: 0 ${Sizing.S} ${Sizing.S} 0;
+    }
 `;
 
 const Container = styled.div<CardListProps>`
@@ -25,12 +29,12 @@ const Container = styled.div<CardListProps>`
 
 const CardWrapper = styled.div<CardListProps>`
     margin-bottom: ${Sizing.S};
-
-    ${props => props.alignment == 'horizontal' ? horizontalCardStyle : '' }
-    
     &:last-child {
         margin: 0;
     }
+    
+    ${props => props.alignment == 'horizontal' ? horizontalCardStyle : '' }
+    
 `;
 
 const CardList = (props: CardListProps) => {

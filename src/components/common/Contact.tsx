@@ -4,9 +4,13 @@ import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import styled from 'styled-components';
 import { getColor } from '../../utils/ThemeProvider';
 import { ColorType, Sizing } from '../../utils/Constant';
+import { getContactProps } from './../../utils/DataProvider';
 
 const Container = styled.div`
+    margin-top: ${Sizing.S};
+    
     .MuiSvgIcon-root {
+        cursor: pointer;
         margin-right: ${Sizing.S};
 
         &:last-child {
@@ -14,13 +18,17 @@ const Container = styled.div`
         }
     }
 `;
+const handleOnClick = (link: string) => () => window.open(link, "_blank");
 
 const Contact = () => {
+    const props = getContactProps();
+    const iconColor = getColor(ColorType.icon);
+
     return (
         <Container>
-            <LinkedInIcon fontSize="large" htmlColor={getColor(ColorType.icon)} />
-            <GitHubIcon fontSize="large" htmlColor={getColor(ColorType.icon)} />
-            <PictureAsPdfIcon fontSize="large" htmlColor={getColor(ColorType.icon)} />
+            <LinkedInIcon fontSize="large" htmlColor={iconColor} onClick={handleOnClick(props.linkedin)} />
+            <GitHubIcon fontSize="large" htmlColor={iconColor}  onClick={handleOnClick(props.gitHub)}/>
+            <PictureAsPdfIcon fontSize="large" htmlColor={iconColor}  onClick={handleOnClick(props.medium)}/>
         </Container>
     );
 };

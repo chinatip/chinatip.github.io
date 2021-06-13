@@ -76,10 +76,12 @@ const MenuList = styled.div`
 const MenuItem = styled(Card)`
     padding: ${Sizing.S};
     cursor: pointer;
+    border-box: box-sizing;
     background: ${getColor(ColorType.tableMenuBackground)} !important;
+    border: ${Sizing.XXS} solid transparent;
 
     &.selected {
-        border: ${Sizing.XXS} solid ${getColor(ColorType.tableMenuBorder)};
+        border-color: ${getColor(ColorType.tableMenuBorder)};
     }
 `;
 const MenuTitle = styled(Typography)`

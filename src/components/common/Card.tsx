@@ -3,13 +3,19 @@ import styled from 'styled-components';
 import { ColorType, Sizing } from '../../utils/Constant';
 import { CardProps } from './../../models/Card.d';
 import { getColor } from './../../utils/ThemeProvider';
+import LinkIcon from '@material-ui/icons/Link';
 
 const Container = styled(MaterialUICard)`
     background: ${getColor(ColorType.cardBackground)} !important;
+    height: 100%;
 `;
 
 const TitleText = styled(Typography)`
     color: ${getColor(ColorType.cardTitle)};
+
+    .MuiSvgIcon-root {
+        cursor: pointer;
+    }
 `;
 
 const SubtitleText = styled(Typography)`
@@ -38,12 +44,21 @@ const ContentContainer = styled.div`
 
 const Card = (props: CardProps) => {
     if (!props) return null;
-    const { title, subtitle, description, content, tags } = props;
-    
+    const { title, subtitle, description, content, links, tags } = props;
+
+    const renderIcon = () => {
+        const link = links && links[0] ? links[0] : null;
+        if (!link) return null;
+        return <LinkIcon fontSize="inherit" onClick={() => window.open(link, "_blank")}/>;
+    };
+
     return (
         <Container>
             <CardContent>
-                <TitleText variant="h5">{title}</TitleText>
+                <TitleText variant="h5">
+                    {title}
+                    {renderIcon()}
+                </TitleText>
                 <SubtitleText variant="body2">{subtitle}</SubtitleText>
                 {description && <DescriptionText variant="caption">{description}</DescriptionText>}
                 {content && (

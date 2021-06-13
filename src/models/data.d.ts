@@ -4,10 +4,10 @@ export interface Data {
     projects: ProjectSectionProps;
     educations: EducationSectionProps;
     activities: ActivitySectionProps;
-    contacts: ContactProp;
+    contacts: ContactProps;
 }
 
-export interface ContactProp {
+export interface ContactProps {
     gitHub: string;
     linkedin: string;
     medium: string;

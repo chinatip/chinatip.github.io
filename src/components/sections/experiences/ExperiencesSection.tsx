@@ -1,14 +1,14 @@
-import Table from '../../common/Table';
 import { getExperienceProps } from '../../../utils/DataProvider';
-import { getExperienceTableProps } from './ExperienceListHelper';
+import { getExperienceCardListProps } from './ExperienceListHelper';
 import { Section } from './../SectionName';
+import CardList from './../../common/CardList';
 
 const ExperiencesSection = () => {
     const props = getExperienceProps();
 
     return (
         <Section sectionName={props.sectionName}>
-            <Table {...getExperienceTableProps()} />
+            <CardList {...getExperienceCardListProps()} />
         </Section>
     );
 };

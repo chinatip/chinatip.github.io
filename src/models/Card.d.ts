@@ -1,5 +1,6 @@
 export interface CardListProps {
     list: CardProps[];
+    alignment?: 'horizontal' | 'vertical';
 }
 
 export interface CardProps {
@@ -7,6 +8,7 @@ export interface CardProps {
     subtitle: string;
     description?: string;
     tags?: string[];
-    link?: string[];
+    links?: string[];
     content?: string[];
+    alignment?: 'horizontal' | 'vertical';
 }

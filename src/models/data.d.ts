@@ -11,12 +11,9 @@ interface Section {
 }
 
 export interface AboutMeSectionProps extends Section {
-    image: string;
     name: string;
     position: string;
     company: string;
-    title: string;
-    subtitle: string;
 }
 
 export interface ExperienceSectionProps extends Section {

@@ -1,13 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { CardProps, CardListProps } from './../../models/Card.d';
 import Card from './Card';
 
-const Container = styled.div`
+const horizontalStyle = css`
+    display: flex;
+`
+const Container = styled.div<CardListProps>`
     width: 100%;
+    ${props => props.alignment == 'horizontal' ? horizontalStyle : '' }
 `;
 
 const CardWrapper = styled.div`
-    width: 100%;
     margin-bottom: 8px;
     
     &:last-child {
@@ -27,7 +30,7 @@ const CardList = (props: CardListProps) => {
     const list = Object.values(props.list).map((cardProps, i) => renderCard(i, cardProps));
 
     return (
-        <Container>
+        <Container {...props}>
             {list}
         </Container>
     )

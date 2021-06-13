@@ -5,7 +5,7 @@ export interface CardListProps {
 
 export interface CardProps {
     title: string;
-    subtitle: string;
+    subtitle?: string;
     description?: string;
     tags?: string[];
     links?: string[];

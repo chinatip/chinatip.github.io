@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Typography } from '@material-ui/core';
-import { ColorType, getColor } from '../../../utils/ThemeProvider';
+import { getColor } from '../../../utils/ThemeProvider';
 import { getAboutMeProps } from '../../../utils/DataProvider';
 import Contact from './../../common/Contact';
+import { ColorType } from '../../../utils/Constant';
 
 const Wrapper = styled.div`
     margin: 40px 0;

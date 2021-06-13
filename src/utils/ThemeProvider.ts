@@ -1,4 +1,4 @@
-
+import { ColorType } from './Constant';
 
 const white: string = '#fff';
 const white5p: string = 'rgb(255 255 255 / 5%)';
@@ -18,27 +18,6 @@ const mediumTurquoise: string = '#64dfdf';
 const turquoise: string = '#72efdd';
 const aquamarine: string = '#80ffdb';
 
-export enum ColorType {
-    name = 'name',
-    position = 'position',
-    bodyText = 'bodyText',
-    icon = 'icon',
-    background = 'background',
-    wrapperBorder = 'wrapperBorder',
-    sectionName = 'sectionName',
-    cardBackground = 'cardBackground',
-    cardTitle = 'cardTitle',
-    cardSubtitle = 'cardSubtitle',
-    cardCaption = 'cardCaption',
-    cardContent = 'cardContent',
-    tableBackground = 'tableBackground',
-    tableMenuBackground = 'tableMenuBackground',
-    tableMenuTitle = 'tableMenuTitle',
-    tableMenuSubtitle = 'tableMenuSubtitle',
-    tableContentBackground = 'tableContentBackground',
-    tableContentText = 'tableContentText',
-}
-
 interface ThemeProps {
     [ColorType.name]: string;
     [ColorType.position]: string;
@@ -56,10 +35,14 @@ interface ThemeProps {
     [ColorType.tableMenuBackground]: string;
     [ColorType.tableMenuTitle]: string;
     [ColorType.tableMenuSubtitle]: string;
+    [ColorType.tableMenuDescription]: string;
+    [ColorType.tableMenuBorder]: string;
     [ColorType.tableContentText]: string;
     [ColorType.tableContentBackground]: string;
 }
 
+const gradientBackground = `linear-gradient(190deg, ${white20p}, ${white5p})`;
+const gradientBackground2 = `linear-gradient(190deg, ${white20p} 10%, ${white5p} 30%)`;
 const defaultTheme: ThemeProps = {
     [ColorType.name]: white,
     [ColorType.position]: purple,
@@ -67,18 +50,20 @@ const defaultTheme: ThemeProps = {
     [ColorType.icon]: white,
     [ColorType.background]: `linear-gradient(45deg, ${purple}, ${frenchViolet}, ${slateBlue}, ${tuftsBlue}, ${blueJeans}, ${vividSkyBlue}, ${skyBlueCrayola}, ${mediumTurquoise}, ${turquoise}, ${aquamarine}) fixed`,
     [ColorType.wrapperBorder]: white65p,
-    [ColorType.sectionName]: white,
-    [ColorType.cardBackground]: `linear-gradient(190deg, ${white20p}, ${white5p})`,
+    [ColorType.sectionName]: white85p,
+    [ColorType.cardBackground]: gradientBackground,
     [ColorType.cardTitle]: white,
     [ColorType.cardSubtitle]: white65p,
     [ColorType.cardCaption]: white65p,
     [ColorType.cardContent]: white,
-    [ColorType.tableBackground]: purple,
-    [ColorType.tableMenuBackground]: white,
-    [ColorType.tableMenuTitle]: purple,
-    [ColorType.tableMenuSubtitle]: purple,
-    [ColorType.tableContentText]: purple,
-    [ColorType.tableContentBackground]: white,
+    [ColorType.tableBackground]: gradientBackground,
+    [ColorType.tableMenuBackground]: gradientBackground,
+    [ColorType.tableMenuTitle]: white,
+    [ColorType.tableMenuSubtitle]: frenchViolet,
+    [ColorType.tableMenuDescription]: white65p,
+    [ColorType.tableMenuBorder]: white65p,
+    [ColorType.tableContentText]: white,
+    [ColorType.tableContentBackground]: gradientBackground2,
 };
 
 let self: ThemeProps = defaultTheme;

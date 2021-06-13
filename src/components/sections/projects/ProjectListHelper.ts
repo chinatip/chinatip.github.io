@@ -20,7 +20,7 @@ export const getProjectTableProps = (): TableProps => {
 const mapProjectToCard = (props: Project): CardProps => {
     return {
         title: props.name,
-        subtitle: props.description,
+        description: props.description,
         links: props.detail.links,
     };
 };

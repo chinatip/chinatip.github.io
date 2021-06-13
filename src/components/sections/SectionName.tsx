@@ -1,9 +1,10 @@
 import { Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
-import { ColorType, getColor } from './../../utils/ThemeProvider';
+import { ColorType, Sizing } from "../../utils/Constant";
+import { getColor } from './../../utils/ThemeProvider';
 
 const Wrapper = styled(Grid)`
-    padding: 20px 0;
+    padding: ${Sizing.L} 0;
 `;
 
 const Name = styled(Typography)`

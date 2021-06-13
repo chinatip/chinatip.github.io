@@ -4,7 +4,8 @@ import ExperiencesSection from './sections/experiences/ExperiencesSection';
 import ProjectsSection from './sections/projects/ProjectsSection';
 import EducationSection from './sections/educations/EducationSection';
 import ActivitySection from './sections/activities/ActivitySection';
-import { ColorType, getColor } from '../utils/ThemeProvider';
+import { getColor } from '../utils/ThemeProvider';
+import { ColorType } from '../utils/Constant';
 
 const gradientBorder = css`
     border: 2px solid transparent;

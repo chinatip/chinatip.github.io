@@ -1,17 +1,32 @@
 import styled, { css } from 'styled-components';
+import { Sizing } from '../../utils/Constant';
 import { CardProps, CardListProps } from './../../models/Card.d';
 import Card from './Card';
 
-const horizontalStyle = css`
+const horizontalContainerStyle = css`
     display: flex;
-`
-const Container = styled.div<CardListProps>`
-    width: 100%;
-    ${props => props.alignment == 'horizontal' ? horizontalStyle : '' }
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `;
 
-const CardWrapper = styled.div`
-    margin-bottom: 8px;
+const horizontalCardStyle = css`
+    min-width: 200px;
+    width: 270px;
+    margin-right: 10px;
+`;
+
+const Container = styled.div<CardListProps>`
+    width: 100%;
+    ${props => props.alignment == 'horizontal' ? horizontalContainerStyle : '' }
+`;
+
+const CardWrapper = styled.div<CardListProps>`
+    margin-bottom: ${Sizing.S};
+
+    ${props => props.alignment == 'horizontal' ? horizontalCardStyle : '' }
     
     &:last-child {
         margin: 0;
@@ -22,7 +37,7 @@ const CardList = (props: CardListProps) => {
     if (!props || !props.list) return null;
     
     const renderCard = (i: number, card: CardProps) => (
-        <CardWrapper>
+        <CardWrapper {...props}>
             <Card key={i} {...card} />
         </CardWrapper>
     );

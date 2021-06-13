@@ -2,11 +2,13 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import styled from 'styled-components';
-import { ColorType, getColor } from '../../utils/ThemeProvider';
+import { getColor } from '../../utils/ThemeProvider';
+import { ColorType, Sizing } from '../../utils/Constant';
 
 const Container = styled.div`
     .MuiSvgIcon-root {
-        margin-right: 8px;
+        margin-right: ${Sizing.S};
+
         &:last-child {
             margin: 0;
         }

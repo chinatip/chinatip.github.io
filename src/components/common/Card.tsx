@@ -1,7 +1,8 @@
 import { Card as MaterialUICard, CardContent, Typography } from '@material-ui/core';
 import styled from 'styled-components';
+import { ColorType, Sizing } from '../../utils/Constant';
 import { CardProps } from './../../models/Card.d';
-import { ColorType, getColor } from './../../utils/ThemeProvider';
+import { getColor } from './../../utils/ThemeProvider';
 
 const Container = styled(MaterialUICard)`
     background: ${getColor(ColorType.cardBackground)} !important;
@@ -20,7 +21,7 @@ const DescriptionText = styled(Typography)`
 `;
 
 const ContentTextWrapper = styled.div`
-    margin-bottom: 8px;
+    margin-bottom: ${Sizing.S};
 
     &:last-child {
         margin: 0;
@@ -32,7 +33,7 @@ const ContentText = styled(Typography)`
 `;
 
 const ContentContainer = styled.div`
-    margin-top: 8px;
+    margin-top: ${Sizing.S};
 `;
 
 const Card = (props: CardProps) => {

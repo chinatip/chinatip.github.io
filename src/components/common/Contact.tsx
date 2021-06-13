@@ -13,17 +13,14 @@ const Container = styled.div`
     justify-content: center;
     margin-top: ${Sizing.S};
     
-    .MuiSvgIcon-root {
+    .MuiSvgIcon-root, .MuiTypography-root{
         cursor: pointer;
         margin-right: ${Sizing.S};
+        color: ${getColor(ColorType.icon)};
 
         &:last-child {
             margin: 0;
         }
-    }
-
-    .MuiSvgIcon-root, .MuiTypography-root {
-        color: ${getColor(ColorType.icon)};
     }
 `;
 const handleOnClick = (link: string) => () => window.open(link, "_blank");
@@ -36,7 +33,7 @@ const Contact = () => {
             <LinkedInIcon fontSize="large" onClick={handleOnClick(props.linkedin)} />
             <GitHubIcon fontSize="large" onClick={handleOnClick(props.gitHub)} />
             <Typography variant="h4">
-                <FontAwesomeIcon icon={["fab", "medium"]} />
+                <FontAwesomeIcon icon={["fab", "medium"]} onClick={handleOnClick(props.medium)}/>
             </Typography>
         </Container>
     );

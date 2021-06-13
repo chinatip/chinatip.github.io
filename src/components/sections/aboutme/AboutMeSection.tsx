@@ -6,7 +6,7 @@ import Contact from './../../common/Contact';
 import { ColorType } from '../../../utils/Constant';
 
 const Wrapper = styled.div`
-    margin: 40px 0;
+    margin: 40px 0 20px;
     text-align: center;
 `;
 

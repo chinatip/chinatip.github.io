@@ -7,6 +7,8 @@ import ActivitySection from './sections/activities/ActivitySection';
 import { getColor } from '../utils/ThemeProvider';
 import { ColorType } from '../utils/Constant';
 import { Desktop, Mobile } from './../utils/BreakpointHelper';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMedium } from '@fortawesome/free-brands-svg-icons';
 
 const gradientBorder = css`
     border: 2px solid transparent;
@@ -45,6 +47,9 @@ const MobileContainer = styled.div`
 `;
 
 const Container = () => {
+    library.add(
+        faMedium,
+    );
     const sections = (
         <>
             <AboutMeSection />

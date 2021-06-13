@@ -43,8 +43,8 @@ const Card = (props: CardProps) => {
         <Container>
             <CardContent>
                 <TitleText variant="body1">{title}</TitleText>
-                <SubtitleText variant="caption">{subtitle}</SubtitleText>
-                {description && <DescriptionText variant="body2">{description}</DescriptionText>}
+                <SubtitleText variant="body2">{subtitle}</SubtitleText>
+                {description && <DescriptionText variant="caption">{description}</DescriptionText>}
                 {content && (
                     <ContentContainer>
                         {content.map(c => (

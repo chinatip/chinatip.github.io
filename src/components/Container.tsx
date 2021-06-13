@@ -9,7 +9,7 @@ import { ColorType, getColor } from '../utils/ThemeProvider';
 const gradientBorder = css`
     border: 2px solid transparent;
     border-radius: 4px;
-    background: ${getColor(ColorType.wrapperBackground)} border-box;
+    background: ${getColor(ColorType.wrapperBorder)} border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     padding: 16px;
     margin: 0 auto;
-    border: 4px solid ${getColor(ColorType.wrapperBackground)};
+    border: 4px solid ${getColor(ColorType.wrapperBorder)};
     border-radius: 4px;
 `;
     

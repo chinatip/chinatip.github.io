@@ -13,18 +13,21 @@
                 "position": "Full Stack Engineer",
                 "duration": "Aug 2018 - Present",
                 "detail": [
-                    "Web application development using React with TypeScript and unit testing, integration testing, data tracking, and releasing",
-                    "Contribute in writing and designing API and Web automate test scripts",
-                    "Aggregating big data for building user loyalty models",
-                    "Test-driven development for every implementation to support A/B experimentation and white labeling products",
-                    "Contributed to the development and continuous enhancement of loyalty related products such as AgodaVIP, AgodaCash, and Cashback"
+                    "Developed and continuous enhanced loyalty related products and logged in user experience on web application by improving information visibility on the UI using React and C#",
+                    "Implemented new reward brandings across pages",
+                    "Designed and implemented API and Web automate test scripts",
+                    "Implemented automated user loyalty data workflows on Hadoop and MSSQL",
+                    "Accustomed to A/B experimentations and white labeling products"
                 ]
             },
             {
                 "company": "Cleverse",
                 "position": "Frontend Web Developer Part-Time & Intern",
                 "duration": "June 2017 - Feb 2018",
-                "detail": ["Visualizing data using ECharts and ReactJS", "Developing forms and landing pages using React"]
+                "detail": [
+                    "Implemented dashboard and landing page for influencer marketing tool in order to pick the best influencers to help promote a campaign using ECharts and React",
+                    "Built new registration forms and landing page for company insurance broker website"
+                ]
             }
         ]
     },

@@ -44,9 +44,9 @@ document.querySelector(".theme-toggle").addEventListener("click", (event) => {
   document.startViewTransition(() => setTheme(next));
 });
 
-/* Card spotlight --------------------------------------------------------- */
+/* Card & pill spotlight --------------------------------------------------------- */
 if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
-  for (const card of document.querySelectorAll(".card")) {
+  for (const card of document.querySelectorAll(".card, .tags li, .chips li")) {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
       card.style.setProperty("--mx", `${event.clientX - rect.left}px`);

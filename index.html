@@ -70,6 +70,7 @@
       <ul class="nav__links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -166,7 +167,7 @@
     <!-- Journey -->
     <section class="section wrap" id="experience" aria-labelledby="experience-title">
       <header class="section__head reveal">
-        <h2 class="section__title" id="experience-title">Where I’ve <em>worked</em></h2>
+        <h2 class="section__title" id="experience-title">Work <em>experience</em></h2>
       </header>
 
       <ol class="timeline">
@@ -181,16 +182,6 @@
               <li><strong>Reliability:</strong> keep core flight APIs healthy, watching them with Sumo Logic and PagerDuty and fixing production issues quickly.</li>
             </ul>
             <ul class="tags" aria-label="Technologies"><li>C# / .NET</li><li>React</li><li>Azure</li><li>Docker</li><li>Kubernetes</li><li>CI/CD</li></ul>
-          </div>
-        </li>
-
-        <li class="timeline__item reveal">
-          <p class="timeline__when">2023 — 2024</p>
-          <div class="timeline__body">
-            <h3 class="timeline__org">University of Melbourne</h3>
-            <p class="timeline__role">Master of Data Science</p>
-            <p>Studied machine learning, forecasting and data visualisation, so I can back engineering decisions with real data.</p>
-            <ul class="tags" aria-label="Topics"><li>Python</li><li>Machine learning</li><li>Forecasting</li><li>Tableau</li></ul>
           </div>
         </li>
 
@@ -218,19 +209,34 @@
             <ul class="tags" aria-label="Technologies"><li>Node.js</li><li>React</li><li>styled-components</li></ul>
           </div>
         </li>
-
-        <li class="timeline__item reveal">
-          <p class="timeline__when">2014 — 2018</p>
-          <div class="timeline__body">
-            <h3 class="timeline__org">Kasetsart University</h3>
-            <p class="timeline__role">B.Eng. Software &amp; Knowledge Engineering</p>
-            <p>Where it started. I was also a teaching assistant for the Computer Programming course, running lab sessions for 60 students.</p>
-          </div>
-        </li>
       </ol>
     </section>
 
-    <!-- Toolkit -->
+    <!-- Education -->
+    <section class="section wrap" id="education" aria-labelledby="education-title">
+      <header class="section__head reveal">
+        <h2 class="section__title" id="education-title">My <em>education</em></h2>
+      </header>
+
+      <div class="edu">
+        <article class="card edu__item reveal">
+          <p class="edu__when">2023 — 2024</p>
+          <h3 class="edu__school">University of Melbourne</h3>
+          <p class="edu__degree">Master of Data Science</p>
+          <p class="edu__note">Machine learning, forecasting and data visualisation.</p>
+          <ul class="tags" aria-label="Topics"><li>Python</li><li>Machine learning</li><li>Forecasting</li><li>Tableau</li></ul>
+        </article>
+
+        <article class="card edu__item reveal">
+          <p class="edu__when">2014 — 2018</p>
+          <h3 class="edu__school">Kasetsart University</h3>
+          <p class="edu__degree">B.Eng. Software &amp; Knowledge Engineering</p>
+          <p class="edu__note">Bangkok, Thailand. Where I first learned to code.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
     <section class="section wrap" id="skills" aria-labelledby="skills-title">
       <header class="section__head reveal">
         <h2 class="section__title" id="skills-title">Skills &amp; <em>learning</em></h2>
@@ -270,22 +276,25 @@
 
     <!-- Contact -->
     <section class="contact wrap" id="contact" aria-labelledby="contact-title">
-      <div class="contact__card reveal">
-        <p class="eyebrow">Contact</p>
-        <h2 class="contact__title" id="contact-title">Say <em>hello</em>.</h2>
-        <p class="contact__lede">Happy to chat about engineering, data or travel tech. Email is the best way to reach me.</p>
-        <div class="contact__actions">
-          <a class="btn btn--primary btn--lg" href="mailto:chinatip.kultanapanit@gmail.com">chinatip.kultanapanit@gmail.com</a>
-          <button class="btn btn--ghost btn--icon copy" type="button" data-copy="chinatip.kultanapanit@gmail.com" aria-label="Copy email address">
-            <svg class="icon copy__idle" aria-hidden="true"><use href="#i-copy"/></svg>
-            <svg class="icon copy__done" aria-hidden="true"><use href="#i-check"/></svg>
-          </button>
-          <span class="copy__status" role="status" aria-live="polite"></span>
+      <div class="contact__inner reveal">
+        <div>
+          <h2 class="section__title" id="contact-title">Say <em>hello</em></h2>
+          <p class="contact__lede">Happy to chat about engineering, data or travel tech. Email is the best way to reach me.</p>
         </div>
-        <ul class="contact__links">
-          <li><a href="https://www.linkedin.com/in/chinatip" target="_blank" rel="noopener">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-          <li><a href="https://github.com/chinatip" target="_blank" rel="noopener">GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-        </ul>
+        <div class="contact__side">
+          <div class="contact__email">
+            <a class="contact__mail" href="mailto:chinatip.kultanapanit@gmail.com">chinatip.kultanapanit@gmail.com</a>
+            <button class="copy" type="button" data-copy="chinatip.kultanapanit@gmail.com" aria-label="Copy email address">
+              <svg class="icon copy__idle" aria-hidden="true"><use href="#i-copy"/></svg>
+              <svg class="icon copy__done" aria-hidden="true"><use href="#i-check"/></svg>
+            </button>
+            <span class="copy__status" role="status" aria-live="polite"></span>
+          </div>
+          <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/chinatip" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+            <li><a href="https://github.com/chinatip" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
